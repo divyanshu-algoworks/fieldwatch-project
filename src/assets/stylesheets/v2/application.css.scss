@@ -1,0 +1,122 @@
+@import "./variables";
+@import "./mixins";
+@import "./modal-release-info";
+@import "./button";
+@import "./icon";
+@import "./paper";
+@import "./table";
+@import "./table-actions";
+@import "./table-link";
+@import './input';
+@import "./textarea";
+@import "./select";
+@import "./search-input";
+@import "./form-group";
+@import "./tooltip";
+@import "./side-menu";
+@import "./dialog";
+@import "./warning";
+@import "./text-editor";
+@import "./notice";
+@import "./checkbox";
+@import "./radio";
+@import "./portal-functionality";
+@import "./quill-snow";
+@import "./body";
+@import "./representative-general-info";
+@import "./incident-form";
+@import "./flex-grid";
+@import "./datepicker";
+@import "./links-list";
+@import "./screenshots-list";
+@import "./files-list";
+@import "./screenshot";
+@import "./magnifier";
+@import "./incident-policies";
+@import "./atomic";
+@import "./tags-input";
+@import "./comment";
+// remove ./compliance-emails-list
+@import "./compliance-emails-list";
+@import "./send-templates-list";
+@import "./react-tabs";
+@import "./dropdown-button";
+@import "./preloader";
+@import "./grid";
+@import "./autocomplete-dropdown";
+@import "./item-preview";
+@import "./training-question";
+@import "./page";
+@import "./logs-label";
+@import "./query-log-list";
+@import "./collapse";
+@import "./chart";
+@import "./filters";
+@import "./filters-container";
+@import "./filter-label";
+@import "./filter-dialog";
+@import "./preview";
+@import "./incident-preview-screenshots";
+@import "./widget";
+@import "./incident-number";
+@import "./incidents-statistic";
+@import "./graph-container";
+@import "./filters-list-select";
+@import "./exist-representative";
+@import "./incidents-actions-panel";
+@import "./raiting-input";
+@import "./tree";
+@import "./nps-question";
+@import "./results";
+@import "./results-side-actions";
+@import "./results-drop-tabs";
+@import "./slim-container";
+@import "./exist-representatives-list";
+@import "./links-form";
+@import "./query-status";
+@import "./query-template-list-item";
+@import "./questions-list";
+@import "./training-answers";
+@import "./training-video";
+@import "./keywords-input";
+@import "./smtp-settings";
+@import "./proxy-smtp-settings";
+@import "./client-form";
+@import "./avatar-control";
+@import "./quiz-question";
+@import "./quiz-view";
+@import "./not-assigned-smses";
+@import "./chat-list";
+@import "./flash-notifications";
+@import "./diff";
+@import "./super_results";
+@import "./notification-center";
+@import './actions-panel';
+@import './checkable-screenshot';
+@import './field_submissions';
+@import './reported-incidents';
+@import './quill-mention';
+@import './reset-password';
+
+#public-react-root {
+  margin-top: 20px;
+}
+
+.fw-captcha {
+  padding-left: 2px;
+  padding-top: 2px;
+  &--invalid {
+    background-color: $fieldwatch-orange;
+  }
+}
+
+.quill {
+  em {
+    font-style: italic;
+    font-weight: inherit;
+  }
+
+  strong em {
+    font-weight: bold;
+  }
+}

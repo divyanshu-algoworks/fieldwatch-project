@@ -1,0 +1,379 @@
+@import "../style.css.scss";
+
+/***  Incident list page ***/
+
+#incident_list_main_container {
+  @include not_valid_input;
+  @include simple_table;
+  @include table_footer;
+  @include modal_window;
+  @include table_scroll;
+  @include warning_modal_fix;
+
+  .title_container {
+    margin-bottom: 7px;
+
+    .buttons_wrapper {
+      padding-right: 0;
+    }
+
+    .page_title {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    .add_incident {
+      @include big_button($momo-cyan, $momo-cyan-hover);
+      border-radius: 0px;
+      font-size: 13px;
+    }
+
+    .export_results {
+      @include big_button($momo-grey, $momo-grey-hover);
+      border-radius: 0px;
+      font-size: 13px;
+    }
+  }
+
+  .table_name {
+    @include tooltip_right_size(-50px, 150px);
+    padding-bottom: 10px;
+
+    .filter_button {
+      @include small_button($momo-cyan);
+      margin-left: 10px;
+      margin-right: 5px;
+    }
+
+    div {
+      display: inline-block;
+    }
+  }
+
+  .panel {
+    border: none;
+
+    .panel {
+      margin-bottom: 0;
+    }
+
+    .panel-header {
+      border-bottom: none;
+
+      &.container {
+        height: 100%;
+        padding: 7px 0 0 0;
+
+        .filters {
+          padding-top: 3px;
+          border-top: 1px solid #ddd;
+        }
+      }
+    }
+  }
+
+  .panel-header {
+    @include filter_container;
+
+    .template_dropdown_button {
+      @include big_button($momo-grey, $momo-grey-hover);
+      height: 35px;
+      width: 149px;
+      margin-right: 17px;
+      vertical-align: bottom;
+    }
+
+    .filter_set_select {
+      margin-left: 8px;
+      vertical-align: middle;
+
+      &.control-select {
+        width: 182px;
+      }
+
+      select {
+        height: 24px;
+        padding: 0 24px 0 8px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+
+    .search_wrapper {
+      display: inline-block;
+      position: relative;
+      vertical-align: bottom;
+
+      .search_icon {
+        position: absolute;
+        top: 9px;
+        left: 10px;
+      }
+    }
+
+    .checkbox_list_modal {
+      .search_wrapper {
+        width: 100%;
+      }
+    }
+
+    .incident_list_search {
+      width: 240px;
+      height: 35px;
+      padding-left: 32px;
+    }
+
+    .filter_help {
+      @include help_tooltip;
+      margin-left: 10px;
+      vertical-align: bottom;
+    }
+  }
+
+  .panel-body {
+    th span.glyphicon {
+      @include border_around_icon();
+    }
+  }
+
+  .multiselect_holder {
+    padding-left: 27px !important;
+    position: relative;
+
+    .select_all_wrapper {
+      @include clear_checkbox;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 27px;
+      height: 38px;
+      box-sizing: border-box;
+      border-right: 1px solid #f7f7f7;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .incident_multiselect_column {
+      position: absolute;
+      top: 38px;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+
+      .multiselect_cell {
+        @include clear_checkbox;
+        width: 27px;
+        height: 46px;
+        box-sizing: border-box;
+        border-right: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        &.is_selected {
+          background-color: $momo-cyan;
+
+          label.mlx:before {
+            background-color: #ffffff;
+          }
+        }
+
+        &.is_selected {
+          background-color: $momo-cyan;
+
+          label.mlx:before {
+            background-color: #ffffff;
+          }
+        }
+      }
+    }
+  }
+
+  .modal_window {
+    @include not_valid_input;
+    .modal-header {
+      i {
+        font-size: 26px;
+        opacity: 1;
+        vertical-align: super;
+      }
+    }
+
+    .modal-body {
+      @include abs_pos_checkboxes(3px, 0px, 20px);
+      .rep_filter_clear {
+        @include small_button($momo-cyan);
+        margin-bottom: 5px;
+      }
+
+      .checkbox-container {
+        position: relative;
+
+        &.hide_tooltip {
+          .tooltip {
+            visibility: hidden !important;
+          }
+        }
+      }
+    }
+
+    .modal-dialog {
+      .modal-content {
+        overflow: visible;
+      }
+    }
+
+    .modal-dialog .incident_filter_input .form-group {
+      .am-checkbox {
+        padding-left: 0;
+        margin-top: 7px;
+      }
+
+      label {
+        position: relative;
+        overflow: visible;
+        margin-left: 22px;
+
+        &:before {
+          left: -22px !important;
+        }
+      }
+    }
+
+    .compliance_action_list .col-xs-4 {
+      padding-right: 0;
+    }
+  }
+
+  .edge_case_check_icon {
+    padding-left: 40%;
+    font-size: 14px;
+    color: $momo-cyan;
+
+    &:after {
+      content: "\e013";
+      font-family: "Glyphicons Halflings";
+    }
+  }
+
+  .table_wrapper {
+    /*
+    width: 1143px;
+    */
+
+    tr {
+      position: relative;
+    }
+  }
+
+  #compliance-email-modal, #training-module-email-modal {
+    .modal-body {
+      padding: 17px 17px 17px 15px;
+
+      &>div {
+        button {
+          margin-right: 0;
+
+          span.caret {
+            margin-left: 5px;
+          }
+        }
+
+        div.row {
+          margin: 0px 1px 10px 0 !important;
+        }
+      }
+
+      .tab-content {
+        padding-left: 2px;
+        padding-right: 0;
+        padding-bottom: 0;
+        margin-bottom: 0;
+
+        p {
+          text-indent: 0 !important;
+        }
+
+        .email_preview_content {
+          p {
+            margin-bottom: 2px;
+          }
+          a {
+            br {
+              display: none;
+            }
+          }
+        }
+
+        .am-checkbox {
+          position: relative;
+        }
+      }
+
+      ul {
+        margin: 0;
+
+        li {
+          padding-right: 10px;
+          padding-left: 10px;
+
+          &.active {
+            padding-left: 0px;
+          }
+
+          &>div.row {
+            margin: 0 !important;
+          }
+        }
+      }
+
+      .new_action_block {
+        margin-bottom: 10px;
+        overflow: auto;
+      }
+
+      button {
+        @include small_button($momo-grey);
+
+        &.send_button {
+          @include small_button($momo-cyan !important);
+        }
+      }
+    }
+
+    @include wysiwyg_editor;
+
+    .modal-footer {
+      padding: 12px 17px 12px 12px;
+
+      button {
+        @include big_button($momo-grey, $momo-grey-hover);
+        margin: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        height: 36px;
+      }
+    }
+
+    .nav-tabs {
+      background-color: white;
+    }
+  }
+}
+.edge-case-check-icon {
+  font-size: 14px;
+  color: $momo-cyan;
+
+  &:after {
+    content: "\e013";
+    font-family: "Glyphicons Halflings";
+  }
+}
+
+@media only screen and (max-device-width: 1024px) {
+  #incident_list_main_container {
+    @include tablet_additional_filters;
+  }
+}

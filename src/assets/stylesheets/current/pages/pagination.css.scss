@@ -1,0 +1,18 @@
+.table-pagination {
+  &__button {
+    padding: 6px 12px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    background-color: #fff;
+    color: #3ea1d2;
+    &--active {
+      cursor: default;
+      background-color: #3ea1d2;
+      color: #fff;
+    }
+  }
+  &__icon {
+    font-size: 17px;
+  }
+}

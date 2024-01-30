@@ -1,0 +1,43 @@
+@import "../style.css.scss";
+
+/***  New client page ***/
+
+#new_client_main_container {
+  width: 1170px;
+  @include page-header;
+  @include not_valid_input;
+
+  .panel-default {
+    border-radius: 0;
+    border: 0;
+  }
+
+  .panel-body {
+    padding-right: 30px;
+    padding-top: 8px;
+
+    .form-group>div {
+      padding-right: 0;
+    }
+  }
+
+  .form-group {
+    padding-bottom: 0;
+  }
+
+  .am-checkbox {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  div.logo_wrapper {
+    max-width: 200px;
+    max-height: 130px;
+    margin-top: 10px;
+  }
+
+  .button_create_client {
+    background-color: $momo-cyan;
+    color: #fff;
+  }
+}

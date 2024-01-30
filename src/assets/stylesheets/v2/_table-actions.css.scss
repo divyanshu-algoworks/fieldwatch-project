@@ -1,0 +1,9 @@
+.table-actions {
+  display: inline-block;
+  &__tooltip-container {
+    display: inline-block;
+    &:nth-child(n + 2) {
+      margin-left: 10px;
+    }
+  }
+}

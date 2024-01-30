@@ -1,0 +1,124 @@
+@import "../style.css.scss";
+
+/***  Query list page ***/
+
+#query_list_main_container,
+#edit_query_main_container {
+  @include simple_table;
+  @include table_footer;
+  @include warning_modal_fix;
+
+  th > span > span {
+    @include border_around_icon;
+  }
+
+  .panel-header {
+    &>div:nth-child(2) {
+      padding-right: 25px;
+    }
+
+    .new_query {
+      @include big_button($momo-cyan, $momo-cyan-hover);
+    }
+
+    .dropdown_wrapper {
+      display: inline-block;
+      width: 135px;
+
+      .template_dropdown_button {
+        @include big_button($momo-grey, $momo-grey-hover);
+        height: 35px;
+      }
+
+      .dropdown-menu.pull-right {
+        right: -4px;
+      }
+
+      .dropdown-menu {
+        z-index: 999;
+      }
+    }
+
+    .search_wrapper {
+      display: inline-block;
+      position: relative;
+      vertical-align: bottom;
+
+      .search_icon {
+        position: absolute;
+        top: 9px;
+        left: 10px;
+      }
+
+      &+div {
+        display: inline-block;
+      }
+    }
+
+    .query_list_search {
+      width: 240px;
+      height: 35px;
+      padding-left: 32px;
+    }
+  }
+
+  .query_status {
+    background: inherit;
+    font-weight: bold;
+    padding-top: 8px;
+    width: 123px !important;
+
+    &.active {
+      .status_text {
+        color: $momo-cyan;
+        margin-right: 8px;
+      }
+
+      .status_icon {
+        background: asset_url("pause.svg") no-repeat;
+      }
+
+      .status_text:after {
+        content: "Running";
+      }
+    }
+
+    .status_text {
+      color: $momo-orange;
+      display: inline-block;
+      margin-right: 8px;
+
+      &:after {
+        content: "Stopped";
+      }
+    }
+
+    .status_icon {
+      display: inline-block;
+      position: relative;
+      margin-left: 5px;
+      vertical-align: text-top;
+      cursor: pointer;
+      width: 25px;
+      height: 25px;
+      background: asset_url("play.svg") no-repeat;
+      background-size: contain !important;
+    }
+  }
+
+  .actions {
+    .tooltip_wrapper {
+      display: inline-block;
+      @include tooltip_top_bottom_size(110px);
+    }
+  }
+
+  .custom_action_column{
+    width: 150px;
+  }
+
+  span.glyphicon.glyphicon-plus {
+    opacity: 1;
+  }
+}
+

@@ -1,0 +1,24 @@
+.quiz-question {
+  &__answer {
+    position: relative;
+    padding: 10px 25px;
+    border-bottom: 1px solid #e6e6e6;
+    &::before {
+      content: ' ';
+      font-family: FontAwesome;
+      width: 20px;
+      position: absolute;
+      top: 10px;
+      left: 5px;
+    }
+    &--wrong::before {
+      content: '\f00d';
+      color: #b5b5b5;
+    }
+
+    &--correct::before {
+      content: '\f00c';
+      color: rgba(0, 183, 119, 0.58);
+    }
+  }
+}

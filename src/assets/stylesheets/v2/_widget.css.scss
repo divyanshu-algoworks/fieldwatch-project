@@ -1,0 +1,28 @@
+.fw-widget {
+  margin-bottom: 15px;
+  &--draggable {
+    cursor: move;
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid $fieldwatch-grey-lightest;
+    padding: 5px;
+  }
+
+  &__name {
+    font-size: 18px;
+    max-width: calc(100% - 35px);
+  }
+
+  &__body {
+    margin-top: -1px;
+    border: 1px solid $fieldwatch-grey-lightest;
+    padding: 5px;
+  }
+
+  &__header-buttons {
+    display: flex;
+  }
+}

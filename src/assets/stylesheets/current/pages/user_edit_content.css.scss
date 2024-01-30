@@ -1,0 +1,85 @@
+@import "../style.css.scss";
+
+#client_edit_main_container {
+  .user_edit_content{
+    @include edit_member_form;
+    @include not_valid_input;
+
+    .panel-body>.form-group:last-child {
+      padding-top: 0;
+    }
+
+    .panel-body div.form-group input[name="password_confirmation"] {
+      margin-top: 8px;
+    }
+
+    .update_user_button {
+      @include big_button($momo-cyan, $momo-cyan-hover);
+      height: 36px;
+    }
+
+    .form-group {
+      .control-select {
+        @include select2_styled_select;
+      }
+
+      div.am-radio {
+        padding: 0;
+      }
+    }
+
+    .territories_group {
+      .checkbox_container {
+        border: 1px solid #ccc;
+        padding-top: 5px;
+
+        .form-group {
+          margin-right: 0;
+          display: inline-block;
+          margin-left: 10px;
+          margin-bottom: 5px;
+        }
+      }
+
+      .am-checkbox {
+        display: inline-block;
+        margin-left: 10px;
+      }
+
+      .checkbox_container {
+        border: 1px solid #ccc;
+        padding-top: 5px;
+      }
+
+      .am-checkbox input[type="checkbox"] + label:before {
+        width: 17px;
+        height: 17px;
+        border: 2px solid #eaeaea;
+        font-size: 12px;
+        line-height: 14px;
+        vertical-align: sub;
+      }
+
+      .am-checkbox input[type="checkbox"]:checked + label:before {
+        vertical-align: baseline;
+        border-color: #3ea1d2;
+      }
+    }
+
+    .radio_wrapper {
+      @include tooltip_right_size(-50px, 150px);
+
+      .form-group {
+        margin-top: 0 !important;
+      }
+    }
+
+    .title_row p {
+      font-size: 20px;
+    }
+
+    .saas_text {
+      margin-bottom: 18px;
+    }
+  }
+}

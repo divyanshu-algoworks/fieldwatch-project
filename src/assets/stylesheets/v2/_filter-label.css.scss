@@ -1,0 +1,18 @@
+.filter-label {
+  &__text {
+    display: inline-block;
+    margin-right: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 11px;
+    opacity: 0.7;
+  }
+
+  &__value {
+    color: $fieldwatch-blue;
+    max-width: 220px;
+    &--changed {
+      color: $fieldwatch-orange;
+    }
+  }
+}

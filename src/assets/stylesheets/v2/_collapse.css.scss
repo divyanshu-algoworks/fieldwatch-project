@@ -1,0 +1,9 @@
+.fw-collapse {
+  &__container {
+    transition: height 300ms ease-in;
+    &--collapsed,
+    &--expanded {
+      overflow: hidden;
+    }
+  }
+}

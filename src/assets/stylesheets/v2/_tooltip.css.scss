@@ -1,0 +1,137 @@
+.tooltip-body {
+  position: absolute;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 1001;
+  white-space: pre-wrap;
+
+  &--top {
+    transform: translate(-50%, -100%);
+    margin-top: -10px;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: calc(50% - 5px);
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top-width: 5px;
+      border-top-style: solid;
+    }
+  }
+
+  &--bottom {
+    margin-top: 10px;
+    transform: translate(-50%, 0);
+    &:before {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: calc(50% - 5px);
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-bottom-width: 5px;
+      border-bottom-style: solid;
+    }
+  }
+
+  &--right {
+    transform: translateY(calc(-50% - 5px));
+    margin-left: 10px;
+  }
+
+  &--left {
+    transform: translate(calc(-100% - 10px), -50%);
+  }
+
+  &--white {
+    background-color: #fff;
+    color: #000;
+    border-color: #000;
+    &:before {
+      border-top-color: #000;
+      border-bottom-color: #000;
+    }
+  }
+
+  &--validation-message {
+    background-color: $fieldwatch-orange;
+    &:before {
+      border-top-color: $fieldwatch-orange;
+      border-bottom-color: $fieldwatch-orange;
+    }
+  }
+
+  &--gray {
+    background-color: #f5f5f5;
+    color: #000;
+    &:before {
+      border-top-color: #f5f5f5;
+      border-bottom-color: #f5f5f5;
+    }
+  }
+
+  &--default {
+    background-color: #000;
+    &:before {
+      border-top-color: #000;
+      border-bottom-color: #000;
+    }
+    &.tooltip-body--right {
+      &:before {
+        content: '';
+        position: absolute;
+        left: -5px;
+        top: calc(50% - 10px);
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-right-width: 5px;
+        border-right-style: solid;
+        border-right-color: #000;
+      }
+    }
+
+    &.tooltip-body--left {
+      &:before {
+        content: '';
+        position: absolute;
+        left: 100%;
+        top: calc(50% - 15px);
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-left-width: 5px;
+        border-left-style: solid;
+        border-left-color: #000;
+      }
+    }
+  }
+
+  &--info {
+    background-color: $fieldwatch-blue;
+    &:before {
+      border-top-color: $fieldwatch-blue;
+      border-bottom-color: $fieldwatch-blue;
+    }
+    &.tooltip-body--right {
+      &:before {
+        content: '';
+        position: absolute;
+        left: -5px;
+        top: calc(50% - 10px);
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-right-width: 5px;
+        border-right-style: solid;
+        border-right-color: $fieldwatch-blue;
+      }
+    }
+  }
+}
+
+.tooltip-container--table-action-tooltip {
+  display: inline-block;
+  &:nth-child(n + 2) {
+    margin-left: 10px;
+  }
+}

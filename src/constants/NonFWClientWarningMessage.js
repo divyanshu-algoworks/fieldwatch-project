@@ -1,0 +1,2 @@
+export const NON_FC_CLIENT_WARNING_MSG = 'The information on this page is only for demonstration purposes and offers us a thorough understanding of the features. Please be aware that you must upgrade to a Fieldwatch User account in order to access the links and functions like filters, save, export, and import.'
+export const FW_ADMIN_WARNING_MSG = 'This is a Non-FW Client and as we are showcasing them static data only for demonstration purposes, here screen sections are empty'

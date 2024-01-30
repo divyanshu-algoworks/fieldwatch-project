@@ -1,0 +1,80 @@
+@import "../style.css.scss";
+
+/***  Query template page ***/
+
+#query_template_main_container {
+  @include simple_table;
+  @include table_footer;
+
+  th > span > span {
+    @include border_around_icon;
+  }
+
+  .panel-header>div:nth-child(2) {
+    padding-right: 11px;
+  }
+
+  .button_wrapper {
+    display: inline-block;
+    vertical-align: super;
+  }
+
+  .new_template_button {
+    @include big_button($momo-cyan, $momo-cyan-hover);
+    display: inline-block;
+    vertical-align: bottom;
+  }
+
+  .search_wrapper {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+
+    .search_icon {
+      position: absolute;
+      top: 9px;
+      left: 10px;
+    }
+  }
+
+  .query_template_search {
+    width: 240px;
+    height: 35px;
+    padding-left: 32px;
+  }
+
+  .actions {
+    width: 110px;
+
+    .tooltip_wrapper {
+      display: inline-block;
+      @include tooltip_top_bottom_size(110px);
+
+      &>div {
+        width: 17px;
+      }
+    }
+  }
+
+  span.glyphicon.glyphicon-plus {
+    opacity: 1;
+  }
+
+  .modal_window {
+    .modal-header {
+      i {
+        font-size: 26px;
+        opacity: 1;
+        vertical-align: super;
+      }
+    }
+
+    .modal-body {
+      i.icon {
+        font-size: 45px;
+        font-weight: normal;
+        opacity: 1;
+      }
+    }
+  }
+}

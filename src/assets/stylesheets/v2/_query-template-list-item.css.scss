@@ -1,0 +1,23 @@
+.query-template-list-item {
+  &__link {
+    display: block;
+    padding: 5px 20px;
+    cursor: pointer;
+    &:hover {
+      background-color: #f5f5f5;
+    }
+    display: block;
+    &,
+    &:hover {
+      color: #333;
+      text-decoration: none;
+    }
+  }
+}
+
+.query-template-list-items-divider {
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}

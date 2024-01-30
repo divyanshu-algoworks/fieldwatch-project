@@ -1,0 +1,19 @@
+.not-assigned-sms {
+  margin-bottom: 10px;
+  &__incidents-to-assign {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+}
+
+.incident-to-assign {
+  border: 1px solid $fieldwatch-table-border;
+  border-radius: 4px;
+  padding: 5px;
+  &__info {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-gap: 10px;
+  }
+}

@@ -1,0 +1,26 @@
+.icon {
+
+  &--bold {
+    font-weight: 700 !important;
+  }
+
+  &--help {
+    font-size: 17px;
+    color: $fieldwatch-black-lighten;
+    cursor: help;
+  }
+
+  &--button {
+    font-size: 17px;
+  }
+
+  &--blue {
+    color: $fieldwatch-blue;
+  }
+
+  &--trash {
+    font-size: 20px;
+    color: red;
+    font-weight: 700 !important;
+  }
+}

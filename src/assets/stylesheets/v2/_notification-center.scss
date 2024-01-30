@@ -1,0 +1,218 @@
+.notification-center {
+  small {
+    font-size: 9px;
+  }
+  height: 57px;
+  position: relative;
+  &__dropdown-trigger {
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+    color: #428bca;
+    text-decoration: none;
+    background-image: none;
+    background: transparent;
+    border: none;
+  }
+  &__dropdown {
+    z-index: 2;
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    right: -35px;
+    left: auto;
+    padding-top: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-color: rgba(0, 0, 0, 0.1);
+    width: 300px;
+  }
+  &__dropdown-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+  }
+}
+
+.notification-center-dropdown-trigger {
+  &__icon {
+    display: inline-block;
+    margin-top: 12px;
+    color: #ddd;
+  }
+  &__new-icon {
+    position: absolute;
+    top: 10px;
+    right: 1px;
+    width: 6px;
+    height: 6px;
+    background: $fieldwatch-orange;
+    border-radius: 50%;
+  }
+}
+
+.notification-center-dropdown {
+  &__title {
+    font-family: Raleway, sans-serif;
+    font-size: 13px;
+    color: rgb(138, 138, 138);
+    text-align: center;
+    padding: 3px 0px 7px;
+    border-bottom: 1px solid rgb(235, 235, 235);
+    width:150px;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  &__inactive-tab{
+    background-color: rgb(228, 228, 228);
+  }
+
+  &__footer {
+    background-image: none;
+    background-color: transparent;
+    font-family: Raleway, sans-serif;
+    font-weight: 500;
+    text-align: center;
+    padding: 8px 0;
+    border: none;
+    border-top: 1px solid #ddd; 
+    width: 100%;
+    cursor: pointer;
+    &:hover {
+      color: $fieldwatch-blue;
+    }
+  }
+  &__list-container {
+    position: relative;
+    height: 204px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__list {
+    width: 317px;
+    height: 100%;
+    overflow-y: scroll;
+    padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */
+    box-sizing: content-box; 
+    position: absolute;
+  }
+
+  &__list-no-item{
+    width: 317px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Raleway, sans-serif;
+  }
+}
+
+.notification-center-dropdown-title {
+  &__badge {
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 9px;
+    vertical-align: middle;
+    margin-left: 4px;
+    background-color: rgb(228, 228, 228);
+    color: rgb(138, 138, 138);
+    min-width: 17px;
+    height: 17px;
+    text-align: center;
+    padding: 3px 6px;
+    border-radius: 10px;
+  }
+}
+
+.notification-center-list {
+  margin: 0;
+  padding-left: 0;
+}
+
+.notification-center-list-item {
+  padding: 15px;
+  display: flex;
+  cursor: pointer;
+  &--dialog:not(.notification-center-list-item--active) {
+    &:nth-of-type(odd) {
+     // background-color: #fafafa;
+      &:hover {
+        background-color: $notification-middle;
+      }
+    }
+  }
+  &__logo {
+    background-color: #e4e4e4;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &--not-seen {
+      background-color: $notification-dark;
+      color: #fff;
+    }
+  }
+ 
+  &__body {
+    margin-left: 10px;
+    line-height: 14px; 
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  &--active {
+    background-color: $notification-light;
+  }
+  &:hover {
+    background-color: $notification-middle;
+    .notification-center-list-item__logo {
+      background-color: $notification-dark;
+    }
+    &, & * {
+      color: #fff;
+    }
+  }
+}
+
+.notification-center-list-item-body {
+  &__date {
+    color: #8a8a8a;
+    display: block;
+    margin-top: 4px;
+    text-transform: uppercase;
+    &--dialog {
+      color: #555555;
+      margin-top: 0;
+      display: flex;
+      flex-wrap: nowrap;
+      font-weight: bold;
+      margin-bottom: 3px;
+    }
+  }
+}
+
+.notification-center{
+  &__alert-text{
+    color: #8a8a8a;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.notifications-dialog-list-container {
+  height: calc(100vh - 60px - 60px - 70px - 45px);
+  overflow-y: auto;
+}
+.alerts_notification{
+  font-size: 25px;
+  -webkit-background-clip: text;
+  background-color: orangered;
+}

@@ -1,0 +1,40 @@
+@import "../style.css.scss";
+
+.rep_imports_content {
+  @include account_preferences_particle;
+  @include modal_window;
+
+  .page-header .right_part {
+    padding-top: 4px;
+  }
+
+  .basic_api_usage_button {
+    @include big_button($momo-cyan, $momo-cyan-hover);
+    height: 36px;
+  }
+
+  th:first-child {
+    padding-left: 15px;
+  }
+
+  .modal-dialog {
+    .modal-header {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .modal-body {
+      padding-bottom: 15px;
+    }
+
+    .modal-footer {
+      margin-top: 0;
+      padding: 8px 11px;
+
+      .apply_button {
+        @include big_button($momo-cyan, $momo-cyan-hover);
+        height: 36px;
+      }
+    }
+  }
+}

@@ -1,0 +1,136 @@
+@import "../style.css.scss";
+
+/***  Unauthorized sellers page ***/
+
+#unauthorized_sellers_main_container {
+  @include simple_table;
+  @include clients_list;
+  @include first_last_th_corrector;
+  @include table_scroll;
+  width: 1170px;
+
+  .container_row {
+    margin: 0;
+  }
+
+  .page-header+div {
+    background: white !important;
+  }
+
+  .title_row {
+    padding-top: 3px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+
+    .page_title {
+      font-size: 19px;
+    }
+
+    .export_results {
+      @include big_button($momo-grey, $momo-grey-hover);
+      height: 30px;
+    }
+  }
+
+  .sub_table {
+    padding-top: 5px;
+    padding-bottom: 7px;
+    padding-left: 6%;
+    padding-right:0;
+
+    .sub_table_header {
+      font-weight: bold;
+      margin-left: 27%;
+      margin-bottom: 5px;
+    }
+
+    .elements div, .values div {
+      margin-bottom: 3px;
+    }
+  }
+
+  .private_sites_help, .activity_in_process_help {
+    @include help_tooltip;
+    display: inline;
+    margin-left: 2px;
+    font-size: 14px;
+    vertical-align: sub;
+  }
+
+  .page-header {
+    padding-right: 11px;
+
+    h1.modal-title {
+      font-size: 20px;
+      margin-top: 8px;
+      display: inline-block;
+      margin-right: 8px;
+    }
+
+    .help_tooltip {
+      @include help_tooltip;
+      font-size: 17px;
+      vertical-align: text-top;
+    }
+
+    .right_part div {
+      display: inline-block;
+      vertical-align: bottom;
+    }
+
+    .tooltip.top {
+      display: inline-block;
+      width: 110px;
+    }
+
+    .tooltip-inner {
+      display: inline-block;
+    }
+  }
+
+  .search_wrapper {
+    position: relative;
+
+    input {
+      width: 200px;
+      height: 32px;
+      padding-left: 25px;
+    }
+
+    .search_icon {
+      position: absolute;
+      font-size: 16px;
+      font-weight: bold;
+      top: 8px;
+      left: 5px;
+    }
+  }
+
+  .right_part a {
+    border-radius: 0;
+  }
+
+  table {
+    span.pointer {
+      margin-right: 12px;
+    }
+  }
+
+  tbody>tr>td:first-child a:hover {
+    color: $momo-cyan;
+    text-decoration: none;
+  }
+
+  .iframe_wrapper {
+    margin-top: 20px;
+
+    iframe {
+      width: 100%;
+      height: 500px;
+      box-sizing: border-box;
+      border: 1px solid #ddd;
+      outline: none;
+    }
+  }
+}

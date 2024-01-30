@@ -1,0 +1,80 @@
+.chat-list {
+  padding: 10px;
+
+  &__message {
+    display: inline-block;
+    border: 1px solid $fieldwatch-table-border;
+    text-align: left;
+    border-radius: 10px;
+    padding: 5px;
+    position: relative;
+    max-width: 50%;
+    min-width: 140px;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+
+    &--incoming {
+      background-color: $fieldwatch-grey-light;
+      &:before {
+        content: ' ';
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: 15px;
+        right: auto;
+        top: auto;
+        bottom: -10px;
+        border: 5px solid;
+        border-color: $fieldwatch-table-border transparent transparent $fieldwatch-table-border;
+      }
+      &:after {
+        content: ' ';
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: 16px;
+        right: auto;
+        top: auto;
+        bottom: -8px;
+        border: 4px solid;
+        border-color: $fieldwatch-grey-light transparent transparent $fieldwatch-grey-light;
+      }
+    }
+
+    &--outgoing {
+      color: #fff;
+      background-color: $fieldwatch-blue-lighten;
+      &:before {
+        content: ' ';
+        position: absolute;
+        width: 0;
+        height: 0;
+        right: 15px;
+        left: auto;
+        top: auto;
+        bottom: -10px;
+        border: 5px solid;
+        border-color: $fieldwatch-table-border $fieldwatch-table-border transparent transparent;
+      }
+      &:after {
+        content: ' ';
+        position: absolute;
+        width: 0;
+        height: 0;
+        right: 16px;
+        left: auto;
+        top: auto;
+        bottom: -8px;
+        border: 4px solid;
+        border-color: $fieldwatch-blue-lighten $fieldwatch-blue-lighten transparent transparent;
+      }
+    }
+  }
+  &__message-date {
+    display: block;
+    color: $fieldwatch-black-lighten;
+    margin: 0 25px;
+    font-size: 10px;
+  }
+}

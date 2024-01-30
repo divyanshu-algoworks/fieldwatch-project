@@ -1,0 +1,192 @@
+@import "../style.css.scss";
+
+.smtp_content {
+  .tab-content {
+    padding: 5px 0 0 0;
+    margin-left: 1px;
+  }
+
+  .nav-tabs {
+    background-color: #F0F0F0;
+  }
+
+  .smtp_basic_content {
+    @include not_valid_input;
+
+    label {
+      font-weight: normal;
+    }
+
+    .panel-default {
+      border-radius: 0;
+      border: 0;
+    }
+
+    .page-header {
+      padding-right: 11px;
+
+      h1.modal-title {
+        font-size: 20px;
+        margin-top: 8px;
+      }
+    }
+
+    .panel-body {
+      padding-right: 30px;
+      padding-top: 8px;
+
+      .form-group>div {
+        padding-right: 0;
+      }
+    }
+
+    .form-group {
+      padding-bottom: 0;
+    }
+
+    .am-checkbox {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    div.logo_wrapper {
+      padding: 2px;
+      border: 1px solid #e4e4e4;
+      display: inline-block;
+    }
+
+    .logo {
+      background: asset_url("default_logo.png") no-repeat;
+      background-size: 100%;
+      width: 200px;
+      height: 150px;
+    }
+
+    .send_test_email_button {
+      @include big_button($momo-grey, $momo-grey-hover);
+      height: 36px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .create_button {
+      @include big_button($momo-cyan, $momo-cyan-hover);
+      height: 36px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  .smtp_proxy_content {
+    @include simple_table;
+    background: #F0F0F0;
+
+    .panel {
+      overflow: hidden;
+      margin-bottom: 5px;
+    }
+
+    .info_text {
+      height: 45px;
+      box-sizing: border-box;
+      border: 2px solid $momo-cyan;
+      padding-top: 10px;
+      padding-left: 11px;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .page_title {
+      height: 54px;
+
+      div {
+        padding: 0;
+      }
+
+      .table_name {
+        font-size: 19px;
+        padding-top: 8px;
+      }
+    }
+
+    .email_setting {
+      padding-top: 7px;
+      padding-right: 11px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #E4E4E4;
+      overflow: visible;
+      margin-left: 0;
+      margin-right: 0;
+
+      &>div:first-child {
+        margin-top: 8px;
+      }
+
+      div {
+        padding-right: 0;
+      }
+
+      input {
+        height: 35px;
+        width: 100%;
+        padding-left: 10px;
+      }
+    }
+
+    .information_container {
+      .row {
+        border-bottom: 1px solid #E4E4E4;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        &:last-child {
+          border: none;
+        }
+      }
+    }
+
+    .particle_title {
+      text-align: center;
+      padding-bottom: 4px;
+      font-weight: bold;
+      margin-top: 4px;
+    }
+
+    .dns_data {
+      word-wrap: break-word;
+    }
+
+    .type_indicator {
+      background: #f0f0f0;
+      border-radius: 4px;
+      padding-left: 9px;
+      padding-right: 9px;
+      padding-bottom: 1px;
+      text-align: center;
+      display: inline-block;
+    }
+
+    .domain_information {
+      .state_indicator {
+        @include filled_label(#3ea1d2, 'active');
+
+        &.unverified {
+          @include filled_label(#ed8800, 'unverified');
+        }
+      }
+    }
+
+    .delete_settings_button {
+      @include big_button($momo-grey, $momo-grey-hover);
+    }
+
+    .update_settings_button {
+      @include big_button($momo-cyan, $momo-cyan-hover);
+    }
+  }
+}
+
+.smtp-makedefault-button {
+  color: #3ea1d2;
+  font-size: 10px;
+}

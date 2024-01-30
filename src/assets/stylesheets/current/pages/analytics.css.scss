@@ -1,0 +1,331 @@
+@import "../style.css.scss";
+
+/***  Unauthorized sellers page ***/
+
+#analytics_main_container {
+  @include simple_table;
+  @include modal_window;
+
+  #incident-date-range-filter, #incident-rep-join-date-filter, #incident-follow-up-filter, #incident-updated-date-filter {
+    select.form-control {
+      padding: 0;
+    }
+  }
+
+  .title_container {
+    margin-bottom: 7px;
+
+    .buttons_wrapper {
+      padding-right: 0;
+    }
+
+    .page_title {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    .add_incident {
+      @include big_button($momo-cyan, $momo-cyan-hover);
+      border-radius: 0px;
+      font-size: 13px;
+    }
+
+    .export_results {
+      @include big_button($momo-grey, $momo-grey-hover);
+      border-radius: 0px;
+      font-size: 13px;
+    }
+  }
+
+  .panel {
+    margin-bottom: 10px;
+    border: none;
+
+    .panel {
+      margin-bottom: 0;
+    }
+
+    .panel-header {
+      border-bottom: none;
+      padding-top: 0;
+
+      &.container {
+        height: 40px;
+
+        select.form-control {
+          height: 26px;
+        }
+      }
+
+      .filter_set_select.control-select {
+        width: 182px;
+        margin-left: 10px;
+        vertical-align: top;
+
+        select.form-control {
+          padding: 0 24px 0 8px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  .panel-header {
+    @include filter_container;
+
+    .filter_help {
+      @include help_tooltip;
+      margin-left: 10px;
+      vertical-align: bottom;
+    }
+
+    .right_side {
+      padding-right: 11px;
+
+      div {
+        display: inline-block;
+      }
+
+      .export_results_button {
+        @include big_button($momo-grey, $momo-grey-hover);
+        height: 34px;
+      }
+    }
+    button.filter_button {
+      margin-top: 10px;
+      height: 22px;
+    }
+  }
+
+  .table_name {
+    @include tooltip_right_size(-50px, 150px);
+
+    .filter_button {
+      @include small_button($momo-cyan);
+      margin-left: 10px;
+    }
+
+    div {
+      display: inline-block;
+    }
+
+    .icon {
+      margin-left: 3px;
+      padding: 3px;
+      margin-top: 2px;
+      cursor: pointer;
+    }
+  }
+
+  .double_graph {
+    margin-left: 0;
+    margin-right: 0;
+
+    &>div {
+      border-bottom: 1px solid #e4e4e4;
+      height: 255px;
+    }
+
+    &>div:first-child {
+      border-right: 1px solid #e4e4e4;
+      padding-left: 0;
+    }
+
+    .analytics_and_tabs {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+
+      .analytics {
+        display: flex;
+        justify-content: space-around;
+        border-bottom: 1px solid #ddd;
+        padding: 0 15px;
+        height: 192px;
+
+        .incident_number {
+          text-align: center;
+
+          .blue {
+            color: $momo-cyan;
+          }
+
+          .number {
+            font-size: 53px;
+          }
+        }
+      }
+
+      .tab_states_block {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+      }
+
+      .tab_states_title {
+        font-size: 14px;
+        padding-left: 8px;
+        padding-top: 5px;
+      }
+
+      .tab_states {
+        display: flex;
+        justify-content: space-around;
+        padding: 0 5px;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 100%;
+        font-size: 12px;
+
+        .tab_state_row {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+
+          .tab_state {
+            display: flex;
+            flex-wrap: wrap;
+            flex-grow: 1;
+            flex-basis: 20%;
+            border: 1px dotted #666;
+            margin: 3px;
+            padding: 2px;
+            border-radius: 4px;
+            justify-content: center;
+
+            div {
+              width: 100%;
+              text-align: center;
+              white-space: nowrap;
+              max-width: 90%;
+              text-overflow: ellipsis;
+              overflow: hidden;
+
+              &:nth-child(2) {
+                color: $momo-orange;
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .incidents_by_status_graph {
+      width: 680px;
+      height: 100%;
+    }
+  }
+
+  .resolution_time_graph {
+    padding-bottom: 15px;
+  }
+
+  .incident_resolution_time_graph {
+    margin-left: auto;
+    margin-right: auto;
+    height: 240px;
+    width: 900px;
+  }
+
+  .incidents_by_category_graph, .top_ten_keywords_graph {
+    width: 545px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 250px;
+  }
+
+  .incidents_by_category_graph, .top_ten_keywords_graph {
+    height: 310px;
+  }
+
+  .trend_over_time_graph {
+    width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 500px;
+  }
+
+  .category_and_top_ten_graphs {
+    &>div {
+      border-top: 1px solid #e4e4e4;
+      height: 320px;
+    }
+  }
+
+  .policy_violations_table {
+    .glyphicon {
+      @include border_around_icon;
+      padding-left: 3px;
+    }
+
+    td:nth-child(2), th:nth-child(2) {
+      text-align: center;
+    }
+  }
+
+  .graph_container {
+    padding-top: 10px;
+    position: relative;
+  }
+
+  .modal_window {
+    .modal-header {
+      i {
+        font-size: 26px;
+        opacity: 1;
+        vertical-align: super;
+      }
+    }
+
+    .modal-body {
+      @include abs_pos_checkboxes(3px, 0px, 20px);
+
+      .checkbox-container {
+        position: relative;
+
+        &.hide_tooltip {
+          .tooltip {
+            visibility: hidden !important;
+          }
+        }
+      }
+      .checkbox_list_modal {
+        .search_wrapper {
+          position: relative;
+
+          .search_icon {
+            position: absolute;
+          }
+        }
+      }
+    }
+
+    .modal-dialog .incident_filter_input .form-group {
+      .am-checkbox {
+        padding-left: 0;
+        margin-top: 7px;
+      }
+
+      label {
+        position: relative;
+        overflow: visible;
+        margin-left: 22px;
+
+        &:before {
+          left: -22px !important;
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen
+and (max-device-width: 1024px) {
+  #analytics_main_container {
+    @include tablet_additional_filters;
+  }
+}

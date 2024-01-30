@@ -1,0 +1,21 @@
+.item-preview {
+  &__label {
+    color: $fieldwatch-black-lighten;
+    // font-weight: 500;
+    // text-align: right;
+    // margin-right: 15px;
+    // margin-bottom: 0;
+  }
+
+  &__value {
+
+  }
+
+  &__rep-site {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+}

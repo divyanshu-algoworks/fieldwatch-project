@@ -1,0 +1,37 @@
+.client-form {
+  display: grid;
+  grid-template-columns: 150px 1fr 200px;
+  grid-column-gap: 15px;
+  &__addon-block {
+    font-size: 10px;
+    line-height: 21px;
+    text-align: center;
+    border: 1px solid #C5DBFB;
+    background: #F4F8FE;
+    padding: 20px 0;
+    &:not(:first-child) {
+      margin-top: -1px;
+    }
+  }
+}
+
+.wrapper {
+  position: relative;
+}
+
+.clear {
+  position: absolute;
+  right: 77px;
+  top: 11px;
+}
+
+.tooltip-token {
+  //position: absolute;
+  right: -3rem !important;
+  top: 12px !important;
+}
+.vertical-row {
+  float:left;
+  width: 2.5px;
+  background-color: #eaeaea
+ } 

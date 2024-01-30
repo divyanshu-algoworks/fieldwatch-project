@@ -1,0 +1,63 @@
+.fw-form-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  &--no-padding {
+    padding: 0;
+  }
+  &--vertical {
+    flex-direction: column;
+    &+.fw-form-group {
+      margin-top: 2px;
+    }
+  }
+  &+.fw-form-group {
+    margin-top: 10px;
+  }
+  &__label {
+    font-weight: 500;
+    text-align: right;
+    margin-right: 15px;
+    margin-bottom: 0;
+    &--invalid {
+      color: $fieldwatch-orange;
+    }
+
+    &--required {
+      color: $fieldwatch-orange;
+    }
+
+    &--vertical {
+      font-size: 11px;
+      align-self: unset;
+    }
+
+    &--disabled {
+      color: $label-disabled;
+    }
+  }
+
+  &__input-container {
+    width: 100%;
+  }
+
+  &__input-addon {
+    border: $input-border;
+    border-left: none;
+    background-color: $fieldwatch-grey-light;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 12px;
+  }
+
+  &__input,
+  &__textarea,
+  &__select {
+    display: block;
+    width: 100%;
+  }
+}

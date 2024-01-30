@@ -1,0 +1,5 @@
+@import "../_mixins.css.scss";
+
+#compilance-action-options {
+  @include drag_style(100px, 670px, 100px);
+}

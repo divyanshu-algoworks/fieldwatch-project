@@ -1,0 +1,32 @@
+.side_menu {
+  div {
+    background: #fff;
+    height: 40px;
+    cursor: pointer;
+    padding: 25px;
+    &:hover {
+      background: linear-gradient(90deg, $fieldwatch-blue 2%, #fff 2%);
+    }
+
+    &.active {
+      &:hover {
+        background: #fff;
+      }
+
+      a {
+        color: $fieldwatch-blue;
+        cursor: default;
+      }
+    }
+
+    a {
+      display: block;
+      padding-left: 15px;
+      padding-top: 10px;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      color: #333;
+    }
+  }
+}

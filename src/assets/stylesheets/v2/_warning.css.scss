@@ -1,0 +1,23 @@
+.warning {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &__circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #f1f1f1;
+    border-radius: 50%;
+    font-size: 45px;
+    height: 80px;
+    width: 80px;
+    margin-bottom: 15px;
+    color: #8a6d3b;
+  }
+  &__text {
+    white-space: pre-wrap;
+    background-color: transparent;
+    border: 0;
+  }
+}

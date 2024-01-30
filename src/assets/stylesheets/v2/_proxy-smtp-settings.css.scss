@@ -1,0 +1,38 @@
+.proxy-smtp-settings {
+  &__alert {
+    border: 2px solid $fieldwatch-blue;
+  }
+
+  &__info-row {
+    margin-bottom: 0;
+    padding: 5px 0;
+    border-bottom: 1px solid #E4E4E4;
+    &:last-of-type {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+  }
+
+  &__type-label {
+    background: #f0f0f0;
+    border-radius: 4px;
+    display: inline-block;
+    text-align: center;
+    padding: 0 9px 1px;
+  }
+
+  &__value {
+    word-wrap: break-word;
+  }
+
+  &__state-label {
+    display: inline-block;
+    padding: 0 10px;
+    border-radius: 12px;
+    color: #fff;
+    background-color: $fieldwatch-blue;
+    &--unverified {
+      background-color: $fieldwatch-orange;
+    }
+  }
+}

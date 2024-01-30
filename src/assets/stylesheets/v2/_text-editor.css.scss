@@ -1,0 +1,41 @@
+// .text-editor {
+//   border-radius: 0;
+//   border: 1px solid #ddd;
+//   &__panel {
+//     border-bottom: 1px solid #ddd;
+//     background-color: #f5f5f5;
+//     padding: 5px 0 5px 5px;
+//   }
+// }
+
+// .fw-text-editor {
+//   .ql-editor {
+//     padding-bottom: 45px;
+//   }
+//   &--invalid {
+//     .ql-toolbar.ql-snow,
+//     .ql-container.ql-snow {
+//       border-width: 2px;
+//       border-color: $fieldwatch-orange;
+//     }
+//   }
+// }
+
+.fw-text-editor {
+  color: #666666;
+  background-color: #f5f5f5;
+  &--invalid {
+    .ql-toolbar.ql-snow,
+    .ql-container.ql-snow {
+      border-width: 2px;
+      border-color: $fieldwatch-orange;
+    }
+  }
+}
+
+.ql-container.ql-snow {
+  background-color: #f5f5f5;
+}
+.ql-height {
+  height: 14rem;
+}

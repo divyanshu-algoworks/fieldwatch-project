@@ -1,0 +1,22 @@
+.tree-container {
+  height: 450px;
+  overflow: hidden;
+}
+
+.tree {
+  outline-style: auto;
+  outline-width: 5px;
+  outline: none;
+  // outline-color: $fieldwatch-grey;
+  overflow: hidden;
+  &:focus {
+    // outline-color: $fieldwatch-blue;
+  }
+  canvas {
+    outline: none;
+  }
+}
+
+.highcharts-credits {
+  display: none !important;
+}

@@ -1,0 +1,15 @@
+.query-log-list {
+  margin: 0;
+  &__term {
+    // display: inline-block;
+    float: left;
+    width: 140px;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+
+  &__definition {
+    margin-bottom: 5px;
+    // display: inline-block;
+  }
+}

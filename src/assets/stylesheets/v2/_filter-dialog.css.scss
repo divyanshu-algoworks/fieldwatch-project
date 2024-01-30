@@ -1,0 +1,17 @@
+.filter-dialog {
+  &__title {
+    color: $fieldwatch-orange;
+  }
+
+  &__checkbox {
+    margin-bottom: 10px;
+  }
+
+  &--date-range {
+    overflow: visible;
+  }
+}
+
+.instruction-dialog {
+  margin-top: 125px;
+}

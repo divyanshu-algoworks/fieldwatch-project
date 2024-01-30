@@ -1,0 +1,10 @@
+export const ID = 'i';
+export const REP_ID = 'k';
+export const SPONSOR_REP_ID = 's';
+export const HAS_INCIDENTS = 'h';
+export const CHILDREN_COUNT = 'c';
+export const NAME = 'n';
+export const LAST_IN_BRANCH = 'b';
+export const PARENTS_COUNT = 'd';
+export const REP_RANK = 'r';
+export const REP_STATUS = 't';

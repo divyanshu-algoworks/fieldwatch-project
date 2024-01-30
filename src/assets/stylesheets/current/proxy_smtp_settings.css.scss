@@ -1,0 +1,31 @@
+.proxy-smtp-status {
+  color: white;
+  border-radius: 5px;
+}
+
+.proxy-smtp-active {
+  background-color: green;
+  text-align: center;
+}
+
+.proxy-smtp-unverified {
+  background-color: orange;
+  text-align: center;
+}
+
+.component-space {
+  margin-top: 20px;
+}
+
+.message-new {
+  color: #60afff;
+  margin-right: 3px;
+}
+
+.message-reply {
+  float: right;
+  span {
+    margin-left: 3px;
+  }
+}
+

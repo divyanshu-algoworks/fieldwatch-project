@@ -1,0 +1,21 @@
+.screenshots-list {
+  &__screenshot {
+    margin: 0px 4px 0 4px;
+    width: calc(25% - 8px);
+    display: inline-block;
+  }
+  &__img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    overflow: hidden;
+  }
+  &__img {
+    width: 100%;
+  }
+
+  &__name {
+    font-size: 11px;
+  }
+}

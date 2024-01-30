@@ -1,0 +1,278 @@
+@import "../current/style.css.scss";
+
+/* Common elements */
+
+.buttons_wrapper {
+  div {
+    display: inline-block;
+    text-align: center;
+    width: 48%;
+  }
+}
+
+.alert {
+  padding: 0;
+  height: 55px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  border: 1px solid #E6E6E6;
+  border-radius: 4px;
+  position: fixed;
+  top: 5px;
+  left: 24%;
+
+  .message {
+    padding: 12px;
+    background: #fff;
+  }
+
+  button {
+    margin-top: -5px;
+  }
+}
+
+.alert-error {
+  &>div.icon {
+    background-color: #EF6262 !important;
+  }
+}
+
+.alert-notice {
+  &>div.icon {
+    background-color: #8DCADF !important;
+  }
+}
+
+
+/***  Login page ***/
+
+#login_main_container {
+  padding-top: 60px;
+
+  div.logo_image {
+    background-image: asset_url('fieldwatch_logo_small.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 182px;
+    height: 32px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .login-container {
+    margin: 0 auto 0 auto;
+  }
+
+  .login-submit button {
+    width: 125px;
+    height: 45px;
+  }
+
+  .panel {
+    box-shadow: none;
+  }
+
+  .link {
+    text-decoration: underline;
+    font-size: 11px;
+  }
+
+  .am-wrapper {
+    padding-top: 0;
+  }
+
+  .am-content {
+    margin-left: 0;
+  }
+
+  .input-group {
+    border-bottom: 2px solid #999;
+
+    i {
+      color: #888;
+      font-weight: bold;
+    }
+  }
+
+  .buttons_links_block {
+    margin-top: 10px;
+    margin-bottom: 100px;
+    height: 60px;
+
+    .link_container {
+      padding-left: 29px;
+
+      div {
+        margin-bottom: 8px;
+      }
+    }
+
+    button {
+      @include big_button($momo-cyan, $momo-cyan-hover);
+      width: 125px;
+    }
+
+    &:after {
+      clear: both;
+    }
+  }
+
+  .footer_logo {
+    text-align: center;
+
+    div {
+      display: inline-block;
+    }
+
+    img {
+      width: 110px;
+      height: 27px;
+      margin-top: 8px;
+      margin-left: 12px;
+    }
+  }
+}
+
+/***  Forgot password page ***/
+
+.forgot_password_page {
+  .page_title {
+    font-size: 32px;
+    color: #999;
+    margin-bottom: 20px;
+  }
+
+  .panel-body button {
+    box-shadow: 1px 1px 4px 0px rgba(50, 50, 50, 0.45);
+    margin-top: 20px;
+  }
+
+  .footer_logo {
+    margin-top: 110px;
+  }
+}
+
+/***  Resend confirmation page ***/
+
+.resend_confirmation_page {
+  .page_title {
+    font-size: 22px;
+    color: #999;
+    margin-bottom: 12px;
+  }
+
+  .panel-body button {
+    box-shadow: 1px 1px 4px 0px rgba(50, 50, 50, 0.45);
+    margin-top: 20px;
+  }
+
+  .footer_logo {
+    margin-top: 120px;
+  }
+}
+
+/***  Reset password page ***/
+
+.reset_password_page {
+  label {
+    margin-bottom: 0;
+    font-weight: normal;
+    padding-left: 43px;
+    color: #999;
+    font-size: 16px;
+  }
+
+  button {
+    @include big_button($momo-cyan, $momo-cyan-hover);
+    width: 100%;
+    box-shadow: 1px 1px 4px 0px rgba(50, 50, 50, 0.45);
+    margin-top: 20px;
+    margin-left: 0;
+  }
+
+  .footer_logo {
+    margin-top: 120px;
+  }
+}
+
+/***  Reset password page ***/
+
+.authy_confirmation_page {
+  .panel {
+    overflow: visible;
+  }
+
+  .token_container {
+    margin-top: 40px;
+  }
+
+  form.authy-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 215px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+  }
+
+  #token-handler {
+    border-bottom: 2px solid #999;
+    padding-bottom: 10px;
+    margin-bottom: 14px;
+
+    span {
+      border: 0;
+      background-color: transparent;
+
+      i {
+        color: #888;
+        font-weight: bold;
+        font-size: 24px;
+      }
+    }
+
+    input {
+      background-color: transparent;
+      box-shadow: none;
+      color: #a3a2a2;
+      padding: 0 10px;
+      font-size: 14px;
+      font-weight: 500;
+      height: 36px;
+      border: none;
+    }
+  }
+
+  .remember_device_block {
+    text-align: center;
+    margin-bottom: 10px;
+
+    span {
+      font-weight: normal;
+      margin-left: 5px;
+    }
+  }
+
+  .button_wrapper {
+    width: 100%;
+
+    input {
+      width: 100%;
+    }
+  }
+
+  .sms_wrapper {
+    position: absolute;
+    top: 10px;
+    right: -100px;
+  }
+
+  .footer_logo {
+    margin-top: 140px;
+  }
+}
+
+

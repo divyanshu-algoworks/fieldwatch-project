@@ -1,0 +1,21 @@
+.autocomplete-dropdown {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  z-index: 1001;
+  max-height: 200px;
+  overflow: auto;
+
+  &__option {
+    padding: 6px 12px;
+    cursor: pointer;
+    &--selected {
+      background-color: #f7f7f7;
+    }
+
+    &:hover {
+      background-color: $fieldwatch-blue;
+      color: #fff;
+    }
+  }
+}

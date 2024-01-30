@@ -1,0 +1,14 @@
+$grid-columns: 12;
+
+.flex-grid {
+  &__row {
+    display: flex;
+  }
+
+  &__col {
+    margin: 0 15px;
+  }
+
+
+
+}

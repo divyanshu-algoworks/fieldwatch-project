@@ -1,0 +1,81 @@
+.fw-checkbox {
+  margin: 0;
+  height: 22px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  &--small {
+    height: 15px;
+    width: 15px;
+  }
+  &+.fw-checkbox {
+    margin-left: 10px;
+  }
+
+  &:hover &__indicator {
+    border-color: $fieldwatch-grey;
+  }
+
+  &:hover &__indicator--disabled {
+    border-color: $fieldwatch-grey-light;
+  }
+
+  &:hover &__indicator--checked {
+    border-color: $fieldwatch-blue;
+  }
+
+  & &__indicator--disabled,
+  &:hover &__indicator--disabled {
+    color: lighten($fieldwatch-blue, 20%);
+    border-color: lighten($fieldwatch-blue, 20%);
+  }
+
+
+  &__indicator {
+    display: inline-flex;
+    position: absolute;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    height: 22px;
+    width: 22px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: $fieldwatch-grey-light;
+    color: $fieldwatch-blue;
+    // TODO: change to FontAwesome in future
+    font-family: 'Stroke 7';
+    background-color: #fff;
+    &--small {
+      width: 15px;
+      height: 15px;
+    }
+    &:before {
+      content: '';
+    }
+    &--checked {
+      border-color: $fieldwatch-blue;
+      &:before {
+        content: "\e6cd";
+      }
+    }
+
+  }
+  &__label-text {
+    display: inline-block;
+    font-weight: 400;
+    margin-left: 27px;
+    &--disabled {
+      color: $fieldwatch-grey;
+    }
+  }
+
+  &__input {
+    display: none;
+  }
+}
+
+.react-switch{
+  top:8px;
+  left:4px;
+}

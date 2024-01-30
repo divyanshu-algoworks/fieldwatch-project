@@ -1,0 +1,33 @@
+.checkable-screenshot {
+  position: relative;
+  cursor: pointer;
+  padding: 5px;
+  &__indicator {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    padding: 5px;
+    background-color: #fff;
+    color: $fieldwatch-blue;
+  }
+
+  &__img-container {
+    min-height: 150px;
+  }
+  &__image {
+    min-height: 40px;
+    width: 100%''
+  }
+
+  &__file-name {
+    background-color: #fff;
+    padding: 5px;
+    right: 0;
+    bottom: 0;
+    width: calc(100% - 10px);
+  }
+}
+
+.checkeable-screenchots {
+  min-height: 180px;
+}

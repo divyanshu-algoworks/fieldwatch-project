@@ -1,0 +1,43 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require ../current/application.css
+ *= require_tree .
+ */
+
+@import "node_modules/pe7-icon/dist/scss/pe-icon-7-stroke";
+@import './login/style.scss';
+@import './amaretti/style.css';
+@import './v2/input.css.scss';
+@import './v2/atomic.css.scss';
+@import './v2/paper.css.scss';
+@import './v2/preloader.css.scss';
+@import './v2/page.css.scss';
+@import './v2/table.css.scss';
+@import './v2/button.css.scss';
+@import './v2/body.css.scss';
+@import './v2/side-menu.css.scss';
+@import './amaretti/style.css';
+@import './current/pages/new_client.css.scss';
+@import './v2/search-input.css.scss';
+@import './v2/results-drop-tabs.css.scss';
+@import './v2/results.css.scss';
+@import './v2/results-side-actions.css.scss';
+@import './v2/_page.css.scss';
+@import './current/header_nav_menu.css.scss';
+
+
+
+
+
+
+
+
+

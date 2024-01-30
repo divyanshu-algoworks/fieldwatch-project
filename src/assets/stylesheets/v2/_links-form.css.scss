@@ -1,0 +1,17 @@
+.links-form {
+  display: flex;
+  align-items: center;
+
+  &__input {
+    flex: 1;
+  }
+
+  &__button {
+    margin-left: 10px;
+  }
+}
+
+.post-content-area {
+  max-height: 20rem;
+  overflow-y: auto;
+}

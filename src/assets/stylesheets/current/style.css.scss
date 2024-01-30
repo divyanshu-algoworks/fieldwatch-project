@@ -1,0 +1,458 @@
+@import "_mixins.css.scss";
+
+/* Variables */
+
+/* corporate colors */
+$momo-cyan: #3ea1d2;
+$momo-grey: #464547;
+$momo-blue: #10497f;
+$momo-orange: #ed8800;
+
+$momo-cyan-hover: #3EABDC;
+$momo-grey-hover: #5f5e60;
+$momo-orange-hover: #FFAE44;
+
+.shown_element, .block_element {
+  display: block !important;
+}
+
+.hidden_element {
+  display: none !important;
+}
+
+.invisible_element {
+  visibility: hidden !important;
+}
+
+.intransparent_element {
+  opacity: 1 !important
+}
+
+.ellipsis {
+  @include ellipsis();
+}
+
+.no_padding {
+  padding: 0 !important;
+}
+
+.disabled_element {
+  opacity: 0.7 !important;
+  color: #ccc !important;
+  cursor: default !important;
+  pointer-events: none;
+}
+
+.orange_element {
+  color: $momo-orange !important;
+}
+
+
+/* Push content down because of the fixed navbar */
+.login_custom {
+  .container {
+    .row {
+      h1 {
+        text-align: center;
+      }
+    }
+  }
+}
+body {
+  padding-bottom: 20px;
+  background-color: #F0F0F0;
+  font-family: 'Open Sans', sans-serif;
+
+  &.one_level_padding {
+    padding-top: 66px;
+
+    .ui-datepicker {
+      width: 17.15em !important;
+    }
+  }
+
+  &.two_level_padding {
+    padding-top: 110px;
+  }
+}
+
+.pointer {
+  cursor: pointer
+}
+
+.align-right {
+  text-align: right
+}
+
+#new_member_main_container, #member_list_main_container, #risk_levels_main_container,
+#clients_users_main_container, #activity_logs_main_container, #territories_main_container,
+#languages_main_container, #users_main_container, #policies_main_container {
+  .placeholder {
+    width: 530px;
+    height: 380px;
+    margin-right: auto;
+    margin-left: auto;
+    //background: asset_url("wip_image.jpeg");
+    background-size: cover;
+  }
+}
+
+.label_creating {
+  @include label(#008000, 'Creating');
+}
+
+.label_editing {
+  @include label(#FF9300, 'Editing');
+}
+
+.no-records {
+  border: none !important;
+}
+
+#gritter-notice-wrapper {
+  position: fixed;
+  top: 45%;
+  right: 3%;
+  z-index: 999999;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  &>div {
+    margin-bottom: 10px;
+  }
+
+  .type_error {
+    background: #d30000 !important;
+  }
+
+  .type_info, .type_alert {
+    background: $momo-cyan !important;
+  }
+
+  .type_warning {
+    background: $momo-orange !important;
+  }
+
+  .type_notice, .type_success {
+    background: #73AFAD !important;
+  }
+
+  .gritter-content {
+    position: relative;
+
+    .gritter-close {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.container_with_textarea {
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+.inline-position {
+  display: inline-block
+}
+
+.half-width {
+  width: 50% !important
+}
+
+.btn-save {
+  @include big_button($momo-cyan, $momo-cyan-hover)
+}
+
+.error-color {
+  color: $momo-orange
+}
+
+.main-orange-color {
+  color: $momo-orange
+}
+.btn-group.pull-right.mbs {
+  .btn-group.mts:not(:first-child) {
+    margin-left: 5px;
+  }
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.row-removed {
+  background-color: #bbb;
+  color: #333;
+  text-decoration: line-through;
+  &--invisible .actions {
+    * {
+      display: none;
+    }
+  }
+}
+
+.ph-3 {
+  padding: 0 3px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.filter_button {
+  @include small_button($momo-cyan);
+  margin-left: 10px;
+  margin-right: 5px;
+  &:hover {
+    color: #fff;
+  }
+}
+
+.file-input-label {
+  height: 22px;
+  background-color: #464547;
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 0px;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  &,
+  &:hover {
+    color: #fff;
+  }
+}
+
+.button {
+  // &--blue {
+  //   @include big_button($momo-cyan, $momo-cyan-hover);
+  //     height: 36px;
+  //     padding-right: 7px;
+  //     padding-left: 7px;
+  // }
+
+  // &--orange {
+  //   @include big_button($momo-orange, $momo-orange-hover);
+  //     height: 36px;
+  //     padding-right: 7px;
+  //     padding-left: 7px;
+  // }
+  &--header {
+    height: 33px;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  &--rep {
+    height: 37px;
+  }
+}
+
+
+.long-url-cell {
+  max-width: 1px; // TODO: fix this hack
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.ellipsed {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.ui-icon {
+  width: 16px;
+  height: 16px;
+  // background-image: asset_url("ui-icons_444444_256x240.png") !important;
+}
+
+.clipboard-input {
+  position: absolute;
+  top: -2000px;
+  left: -2000px;
+}
+
+.muted {
+  color: $momo-grey-hover;
+}
+
+.removed {
+  color: $momo-grey-hover;
+  text-decoration: line-through;
+}
+
+.file_recover {
+  color: #428bca;
+  font-weight: normal;
+  text-decoration: underline;
+  &:hover {
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
+
+/* Hide input placeholders on focus */
+:focus::-webkit-input-placeholder {color: transparent}
+:focus::-moz-placeholder          {color: transparent}
+:focus:-moz-placeholder           {color: transparent}
+:focus:-ms-input-placeholder      {color: transparent}
+
+.actions {
+  // width: 110px;
+
+  .tooltip_wrapper {
+    display: inline-block;
+    @include tooltip_top_bottom_size(110px);
+  }
+}
+
+.spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: $momo-cyan;
+}
+
+.analytic-container {
+  position: relative;
+  min-height: 300px;
+}
+
+.grey-button {
+  background-color: $momo-grey;
+  &:hover {
+    background-color: $momo-grey-hover;
+  }
+}
+
+.graph-collapse {
+  &__header {
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+  }
+
+  &__expander {
+    display: flex;
+    padding: 0;
+    border: none;
+    background-image: none;
+    background-color: transparent;
+    color: #999;
+    &:hover {
+      color: #428bca;
+    }
+  }
+}
+
+.loader-container {
+  height: 100px;
+}
+
+.chart-msg {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  white-space: pre-line;
+  text-align: center;
+  color: #bbb;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+// TODO: remove this when rep management will migrate on react 16
+.monitor-label {
+  margin-left: 5px;
+  height: 37px;
+  display: inline-flex;
+  align-items: center;
+  padding-bottom: 2px;
+  font-size: 12px;
+  border: none;
+  .glyphicon {
+    position: inherit;
+  }
+}
+
+.edit-rep-buttons {
+  display: inline-flex;
+}
+
+.select2-container.select2-container--default.select2-container--open {
+  z-index: 10050;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.fs-12 {
+  font-size: 12px !important;
+}
+
+.related-urls-modal {
+  .actions {
+    width: 100px;
+  }
+}
+
+.related-urls-modal {
+  @include search_wrapper();
+  .search_icon {
+    font-size: 16px !important;
+  }
+}
+
+.single-search-status-btn {
+  background-image: none;
+  background-color: transparent;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+  color: #3ea1d2;
+  &--active {
+    color: #ed8800;
+  }
+}
+
+em {
+  font-weight: 700;
+  font-style: normal;
+}
+
+.subDomainBox {
+  height: 35px;
+  margin-left: 28px;
+  max-width: 93%;
+  @media screen and (min-width: 756px) and (max-width: 1200px) {
+    max-width: 90%;
+  }
+}
+
+.infoIcon {
+  padding-left: 5px;
+  cursor: default;
+}
+
+.radioPaddingBottom {
+  padding-bottom: 5px;
+}

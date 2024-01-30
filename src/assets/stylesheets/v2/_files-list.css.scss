@@ -1,0 +1,62 @@
+.files-list {
+  margin: 0;
+  padding-left: 30px;
+
+  &__file {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__file-progress {
+    position: absolute;
+    top: 0;
+    height: 5px;
+  }
+
+  &__file-name {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    &--removed {
+      color: #5f5e60;
+      text-decoration: line-through;
+    }
+    &--unloaded {
+      color: grey;
+    }
+  }
+
+  &__file-name-compliance{
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+}
+
+.file_uploder {
+  min-width: 250px !important;
+  height: 10rem !important;
+  margin-right: 15px;
+  border: dashed 2px lightgrey !important;
+}
+
+.screenshot_uploder {
+  min-width: 590px !important;
+  height: 10rem !important;
+  margin-right: 2rem;
+  border: dashed 2px lightgrey !important;
+}
+
+.file-types {
+  display: none;
+}
+
+.sc-fqkvVR {
+  display: none;
+}
+
+.bpxkGG > span {
+ color: #666 !important;
+}

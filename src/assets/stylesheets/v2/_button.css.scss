@@ -1,0 +1,111 @@
+.button {
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 1px;
+  & + .button {
+    margin-left: 5px;
+  }
+  &,
+  &:hover,
+  &:focus {
+    color: #fff;
+    text-decoration: none;
+    outline: none;
+  }
+
+  &--small {
+    padding: 2px 5px;
+
+  }
+
+  &--default {
+  padding: 6px 12px;
+  }
+
+  &--big {
+    padding: 10px 12px;
+  }
+
+
+  &--white {
+    color: #333;
+    border-color: #ccc;
+    background-color: #fff;
+    &:hover {
+      color: #333;
+      background-color: #ebebeb;
+    }
+  }
+
+  &--orange {
+    background-color: $fieldwatch-orange;
+    border-color: $fieldwatch-orange;
+    &:hover {
+      background-color: $fieldwatch-orange-lighten;
+    }
+  }
+
+  &--red {
+    background-color: $fieldwatch-red;
+    border-color: $fieldwatch-red;
+    &:hover {
+      background-color: $fieldwatch-red-lighten;
+    }
+  }
+
+  &--blue {
+    background-color: $fieldwatch-blue;
+    border-color: $fieldwatch-blue;
+    &:hover {
+      background-color: $fieldwatch-blue-lighten;
+    }
+  }
+
+  &--black {
+    background-color: $fieldwatch-black;
+    border-color: $fieldwatch-black;
+    &:hover {
+      background-color: $fieldwatch-black-lighten;
+    }
+  }
+
+  &--dropdown {
+    padding-right: 20px;
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      top: calc(50% - 2px);
+      right: 6px;
+      border-top: 4px solid #fff;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+    }
+  }
+
+  &--link {
+    background-color: transparent;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0;
+    opacity: 0.7;
+    border: none;
+    &, &:focus {
+      color: #333;
+    }
+    &:hover {
+      color: #3ea1d2;
+      text-decoration: none;
+    }
+  }
+  &--disabled {
+    opacity: .65;
+    cursor: default;
+  }
+
+  &--link.button--disabled {
+    color: #ccc;
+  }
+}

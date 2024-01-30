@@ -1,0 +1,34 @@
+.portal-functionality {
+  padding: 10px;
+  &:not(:last-child) {
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  &__title {
+    margin-top: 0;
+    font-size: 18px;
+  }
+
+  &__body {
+    display: flex;
+  }
+
+  &__description {
+    flex: 50%;
+  }
+
+  &__video {
+    flex: 50%;
+  }
+
+  &__no-video {
+    width: 550px;
+    height: 320px;
+    background: asset_url("coming_soon.jpg");
+    background-size: 550px 320px;
+  }
+
+  &__main-points {
+    list-style-type: circle;
+  }
+}

@@ -1,0 +1,113 @@
+@import "../style.css.scss";
+
+#incident_side_menu {
+  &.out_of_sight .side_menu_container {
+    right: -500px !important;
+  }
+
+  .side_menu_container {
+    position: fixed;
+    top: 190px;
+    right: 0;
+    right: 0;
+    z-index: 500;
+    width: 200px;
+    background: $momo-grey;
+    padding-top: 20px;
+    transition-property: right;
+    border-top-left-radius: 4px;
+    z-index: 1050;
+
+    .menu_title {
+      width: 100%;
+      color: $momo-orange;
+      font-size: 16px;
+      font-weight: 100;
+      padding-left: 18px;
+
+      .amount_selected {
+        margin-left: 10px;
+      }
+    }
+
+    .actions_wrapper {
+      margin-top: 35px;
+      margin-bottom: 25px;
+      padding-left: 15px;
+
+      .menu_action {
+        font-size: 16px;
+        font-weight: 100;
+        color: #c3c3c3;
+        margin-top: 20px;
+        cursor: pointer;
+        position: relative;
+
+        .action_title {
+          margin-left: 35px;
+        }
+
+        .side_menu_action_button {
+          position: absolute;
+          left: 0;
+          width: 25px;
+          height: 25px;
+          box-sizing: border-box;
+          border: 1px solid #c3c3c3;
+          text-align: center;
+          border-radius: 4px;
+          background: $momo-grey;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          &.outside {
+            left: -43px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+    }
+
+    .side_menu_switcher {
+      position: absolute;
+      width: 34px;
+      height: 36px;
+      left: -34px;
+      top: 12px;
+      background: $momo-grey;
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      i {
+        color:  #c3c3c3;
+        font-size: 46px;
+      }
+    }
+  }
+
+  .modal_window {
+    .side_actions_wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+
+      .side_action_element {
+        flex-basis: 33.3%;
+        position: relative;
+      }
+    }
+
+    .modal-body .am-radio input[type="radio"] + label:before {
+      position: static;
+    }
+  }
+}

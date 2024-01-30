@@ -1,0 +1,13 @@
+.filters-list-select {
+  display: inline-block;
+  &__trigger {
+    padding: 0 5px;
+    width: 180px;
+    @include ellipsis();
+  }
+
+  &__option {
+    padding: 0 5px;
+    @include ellipsis();
+  }
+}

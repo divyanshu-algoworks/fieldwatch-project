@@ -1,0 +1,8 @@
+.representative-general-info {
+  &__row {
+    display: flex;
+    &>*:nth-child(n+1) {
+      margin-left: 8px;
+    }
+  }
+}

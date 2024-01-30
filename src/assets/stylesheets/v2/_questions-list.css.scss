@@ -1,0 +1,28 @@
+.questions-list {
+  margin: 0;
+  padding-left: 15px;
+  &__question {
+    margin-top: 10px;
+  }
+
+  &__question-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__question-text {
+
+  }
+
+  &__answers {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__answer {
+    border-bottom: 1px solid #e6e6e6;
+    margin-top: 10px;
+  }
+}

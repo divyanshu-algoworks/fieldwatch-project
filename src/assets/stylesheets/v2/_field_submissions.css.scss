@@ -1,0 +1,51 @@
+.fs-form-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fs-form-name {
+  width: 45%;
+}
+
+.fs-form-groupid {
+  width: 45%;
+}
+
+.fs-form-sendreport {
+  margin-top: 10px;
+}
+
+.fs-form-group {
+  margin-top: 10px;
+
+  &__checkbox-container {
+    &--required {
+      padding: 9px 12px;
+    }
+
+    &--active {
+      padding: 9px 5px;
+    }
+  }
+
+  &__header {
+    border-bottom: 1px solid #F0F0F0;
+    padding: 5px;
+  }
+}
+
+.fs-form-group-container {
+  margin-left: 50px;
+}
+
+.fs-form-sub-group {
+  &__header {
+    border-bottom: 1px solid #F0F0F0;
+  }
+}
+
+.fs-form-sub-group-container {
+  display: flex;
+  align-items: baseline;
+  margin-left: 50px;
+}

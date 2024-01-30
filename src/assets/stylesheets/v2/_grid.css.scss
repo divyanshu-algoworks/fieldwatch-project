@@ -1,0 +1,25 @@
+.grid {
+  position: relative;
+  &__row {
+    // display: flex;
+    position: relative;
+    min-width: 100%;
+    max-width: calc(100% + 20px);
+    margin: 0 -10px 10px -10px;
+    &:after {
+      content: '';
+      clear: both;
+      display: table;
+    }
+  }
+  &__col {
+    float: left;
+    margin: 0 10px;
+  }
+}
+
+@for $i from 1 to 13 {
+  .grid__col--#{$i} {
+    width: calc(100% / 12 * #{$i} - 20px);
+  }
+}

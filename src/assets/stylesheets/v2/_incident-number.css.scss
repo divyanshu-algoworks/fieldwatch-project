@@ -1,0 +1,13 @@
+.incident-number {
+  &__number {
+    text-align: center;
+    font-size: 53px;
+    &--blue {
+      color: $fieldwatch-blue;
+    }
+  }
+
+  &__description {
+
+  }
+}

@@ -1,0 +1,50 @@
+.tab-states {
+  padding: 0 5px;
+  &__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &--small {
+      max-height: 110px;
+      overflow-y: auto;
+    }
+  }
+  &__tab-state {
+    flex-basis: 20%;
+    margin: 3px;
+  }
+}
+
+.tab-state {
+  margin: 5px;
+  min-width: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex-grow: 1;
+  border: 1px dotted #666;
+  padding: 2px;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  &--small {
+    min-width: 100px;
+  }
+  &__title {
+    white-space: unset;
+    font-size: 16px;
+    &--small {
+      font-size: 12px;
+    }
+  }
+
+  &__value {
+    font-size: 22px;
+    color: #ed8800;
+
+    &--small {
+      font-size: 16px;
+    }
+  }
+}

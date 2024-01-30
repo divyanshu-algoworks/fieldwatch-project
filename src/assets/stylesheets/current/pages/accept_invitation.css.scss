@@ -1,0 +1,68 @@
+@import "../style.css.scss";
+
+#accept_invitation_main_container {
+  width: 1170px;
+
+  .title_row {
+    @include title_row(51px, 7px);
+    background: #fff;
+
+    p {
+      margin-top: 8px;
+      font-size: 18px;
+    }
+
+    .button_wrapper > input {
+      @include big_button($momo-cyan, $momo-cyan-hover);
+      height: 36px;
+      padding-right: 7px;
+      padding-left: 7px;
+    }
+  }
+
+  .panel-default {
+    border-radius: 0;
+    border: 0;
+  }
+
+  .panel-body {
+    padding-right: 30px;
+    padding-top: 8px;
+
+    .form-group>div {
+      padding-right: 0;
+    }
+
+    label {
+      font-weight: normal;
+    }
+
+    .input_wrapper input {
+      width: 400px;
+      height: 34px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  .form-group {
+    padding-bottom: 0;
+  }
+}
+
+.button {
+  // &:not(&.button--link) {
+  //   padding: 8px 12px 6px 12px !important;
+  // }
+  // &--blue {
+  //   @include big_button($momo-cyan, $momo-cyan-hover);
+  //     height: 36px;
+  //     padding-right: 7px;
+  //     padding-left: 7px;
+  // }
+  &--header {
+    height: 33px;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+}

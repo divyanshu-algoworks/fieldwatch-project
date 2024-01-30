@@ -1,0 +1,35 @@
+.preloader {
+  height: 100%;
+  &--fixed {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+  }
+
+  &__overlay {
+    height: 100%;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    &--small {
+      min-height: 25px;
+      height: 25px;
+    }
+  }
+  &__icon {
+    width: 90px;
+    height: 90px;
+    background: url(/assets/images/cyan_ajax_loader.gif) no-repeat center center;
+    background-size: contain;
+    &--small {
+      height: 25px;
+      width: 25px;
+    }
+  }
+}
+

@@ -1,0 +1,42 @@
+@import "../style.css.scss";
+
+#notification_settings_container {
+  .side_menu {
+    div {
+      background: #fff;
+      height: 40px;
+      cursor: pointer;
+
+      &:hover {
+        background: linear-gradient(90deg, #3ea1d2 2%, #fff 2%);
+      }
+
+      &.active {
+        &:hover {
+          background: #fff;
+        }
+
+        a {
+          color: #3ea1d2;
+          cursor: default;
+        }
+      }
+
+      a {
+        display: block;
+        padding-left: 15px;
+        padding-top: 10px;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        color: #333;
+      }
+    }
+  }
+
+  .save_button {
+    @include big_button($momo-cyan, $momo-cyan-hover);
+    margin-right: 10px;
+    height: 36px;
+  }
+}

@@ -1,0 +1,14 @@
+.filters {
+  &__list {
+    overflow: hidden;
+    &--collapsed {
+      height: 0;
+    }
+  }
+}
+
+.filter-change-message {
+  margin-left: 18rem;
+  color: orange;
+  font-size: initial;
+}

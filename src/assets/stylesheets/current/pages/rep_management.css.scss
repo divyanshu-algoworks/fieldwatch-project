@@ -1,0 +1,122 @@
+@import "../style.css.scss";
+
+.rep_management_content {
+  @include account_preferences_particle;
+
+  table {
+    font-size: 13px;
+
+    th:first-of-type {
+      padding-left: 18px;
+    }
+  }
+
+  .table > thead:first-child > tr:first-child > th {
+    white-space: nowrap;
+  }
+
+  .table_wrapper {
+    width: 870px;
+    overflow-x: scroll;
+  }
+
+  div.pull-left {
+    max-width: 210px;
+    white-space: nowrap;
+
+    h1.modal-title {
+      text-overflow: ellipsis;
+      max-width: 240px;
+      overflow: hidden;
+    }
+  }
+
+  #import_button {
+    @include big_button($momo-grey, $momo-grey-hover);
+    height: 33px;
+    padding-top: 8px;
+  }
+
+  .rep_button_wrapper {
+    max-width: 220px;
+    overflow: hidden;
+  }
+
+  #new_rep_button {
+    @include big_button($momo-cyan, $momo-cyan-hover);
+    height: 33px;
+    padding-top: 8px;
+    text-overflow: ellipsis;
+    max-width: 220px;
+    overflow: hidden;
+  }
+
+  #rep-csv-import-modal {
+    top: 12%;
+    left: 28%;
+
+    .modal-header {
+      display: block;
+      margin-bottom: 0;
+    }
+
+    .modal-body {
+      padding-top: 0;
+      padding-bottom: 0;
+
+      .file_description {
+        font-size: 12px;
+      }
+
+      .upload_wrapper {
+        display: block;
+        margin-top: 3px;
+        margin-bottom: 12px;
+
+        #file_upload_button {
+          @include small_button($momo-grey);
+        }
+
+        .file_name {
+          vertical-align: top;
+        }
+
+        div {
+          display: inline-block;
+          margin-right: 15px;
+        }
+      }
+
+      .am-radio {
+        padding-top: 0;
+      }
+
+      .file_hint {
+        margin-top: 10px;
+      }
+    }
+
+    .action_title {
+      font-weight: bold;
+      margin-bottom: 10px;
+      padding-left: 15px;
+    }
+
+    .modal-footer {
+      display: block;
+      padding: 8px 11px;
+      margin-top: 0px;
+
+      .apply_button {
+        @include big_button($momo-cyan, $momo-cyan-hover);
+        height: 36px;
+      }
+
+      .btn-default {
+        @include big_button($momo-grey, $momo-grey-hover);
+        height: 36px;
+      }
+
+    }
+  }
+}

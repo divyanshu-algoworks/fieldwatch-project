@@ -1,0 +1,148 @@
+.fw-table {
+  font-size: 13px;
+  margin-bottom: 0 !important;
+
+  &--horizontal-scroll {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  &__table {
+    margin-bottom: 0;
+    min-width: 100%;
+  }
+
+  &__sort-indicator {
+    &,
+    &:hover {
+      color: #333;
+    }
+  }
+
+  &__cell {
+    &--fixed {
+      border-left: solid 1px $fieldwatch-table-border;
+      border-right: solid 1px $fieldwatch-table-border;
+      left: 0;
+      position: absolute;
+      top: auto;
+      width: 31px;
+      z-index: 1;
+    }
+    &--header,
+    &--empty {
+      white-space: nowrap;
+    }
+
+    &--body {
+    }
+
+    &--check {
+      text-align: center;
+      background-color: #fff;
+    }
+  }
+
+  &__header-cell {
+    background-color: #fff;
+    white-space: nowrap;
+
+    &--check {
+      text-align: center;
+    }
+  }
+
+  &__row {
+    min-height: 37px;
+    height: 37px;
+    background-color: #fff;
+    &--draggable {
+      cursor: move;
+    }
+
+    &--empty {
+      font-weight: 300;
+    }
+
+    &--with-checkbox {
+      padding-left: 31px;
+    }
+
+    &--selected {
+      background-color: $fieldwatch-blue;
+      color: #fff;
+    }
+    &--removed {
+      background-color: #bbb;
+      text-decoration: line-through;
+    }
+
+    &--hide-actions {
+      .table-actions {
+        display: none;
+      }
+    }
+  }
+
+  &__body-cell {
+    background-color: #fff;
+    &--check {
+      text-align: center;
+    }
+  }
+
+  &__paginatior-container {
+    margin-top: 20px;
+    padding: 15px;
+  }
+
+  &__paginator {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__pagination-button {
+    &,
+    &:hover {
+      background-color: #fff;
+      color: #3ea1d2 !important;
+      border-color: #fff;
+    }
+    &--active {
+      &,
+      &:hover {
+        color: #fff !important;
+        background-color: $fieldwatch-blue;
+        border-color: $fieldwatch-blue;
+        cursor: default;
+      }
+    }
+  }
+}
+
+.arrows {
+  position: relative;
+  width: 30px;
+  .glyphicon {
+    position: relative;
+    &:first-child {
+      left: 7px;
+    }
+    &:last-child {
+      left: 0px;
+    }
+  }
+
+  &--right {
+    .glyphicon {
+      position: relative;
+      &:first-child {
+        left: -3px;
+      }
+      &:last-child {
+        left: -10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.links-list {
+  margin: 0 10px;
+  &__list {
+    padding: 0 10px;
+    margin: 0;
+    position: relative;
+    &--edit {
+      padding: 0;
+      list-style: none;
+    }
+  }
+
+  &__list-item {
+    @include ellipsis();
+    &--edit {
+      display: flex;
+    }
+  }
+
+  &__link {
+    max-width: calc(100% - 45px);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    flex: 1;
+  }
+
+  &__list-item-buttons {
+
+  }
+}

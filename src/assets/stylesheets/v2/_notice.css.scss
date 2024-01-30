@@ -1,0 +1,53 @@
+.fw-notice {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding: 10px;
+  position: relative;
+  margin-bottom: 10px;
+  &__success {
+    background-color: #73AFAD;
+  }
+
+  &__warning {
+    background-color: #ed8800;
+  }
+
+  &__info {
+    background-color: #3ea1d2;
+  }
+  &__error {
+    background-color: #d30000;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  &__close {
+    border: none;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    color: #fff;
+  }
+
+  &__close-icon {
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  &__content {
+    margin-right: 10px;
+    width: calc(100% - 25px);
+  }
+  &__info-icon {
+    font-weight: 700;
+
+  }
+}

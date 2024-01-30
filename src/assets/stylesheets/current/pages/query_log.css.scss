@@ -1,0 +1,118 @@
+@import "../style.css.scss";
+
+/***  Query list page ***/
+
+#query_log_main_container {
+  @include simple_table;
+  @include table_footer;
+
+  th > span > span {
+    @include border_around_icon;
+  }
+
+  .panel-header {
+    &>div:nth-child(2) {
+      padding-right: 25px;
+    }
+
+    .new_query {
+      @include big_button($momo-cyan, $momo-cyan-hover);
+    }
+
+    .dropdown_wrapper {
+      display: inline-block;
+      width: 135px;
+
+      .template_dropdown_button {
+        @include big_button($momo-grey, $momo-grey-hover);
+        height: 35px;
+      }
+
+      .dropdown-menu.pull-right {
+        right: -4px;
+      }
+    }
+
+    .search_wrapper {
+      display: inline-block;
+      position: relative;
+      vertical-align: bottom;
+
+      .search_icon {
+        position: absolute;
+        top: 9px;
+        left: 10px;
+      }
+    }
+
+    .query_list_search {
+      width: 240px;
+      height: 35px;
+      padding-left: 32px;
+    }
+  }
+
+  .query_status {
+    background: inherit;
+    font-weight: bold;
+    padding-top: 8px;
+
+    &.active {
+      .status_text {
+        color: $momo-cyan;
+      }
+
+      .status_icon:after {
+        content: "\e072";
+        font-family: "Glyphicons Halflings";
+      }
+
+      .status_text:after {
+        content: "Running";
+      }
+    }
+
+    .status_text {
+      color: $momo-orange;
+      display: inline-block;
+
+      &:after {
+        content: "Stopped";
+      }
+    }
+
+    .status_icon {
+      display: inline-block;
+      width: 30px;
+      height: 20px;
+      background: $momo-grey;
+      border-radius: 0px;
+      position: relative;
+      margin-left: 5px;
+      vertical-align: inherit;
+      cursor: pointer;
+
+      &:after {
+        content: "\e073";
+        font-family: "Glyphicons Halflings";
+        left: 8px;
+        position: absolute;
+        font-size: 14px;
+        color: #fff;
+      }
+    }
+  }
+
+  .action_container {
+    .icon {
+      font-size: 17px;
+      margin-right: 8px;
+      cursor: pointer;
+
+      &:first-child {
+        margin-right: 6px;
+      }
+    }
+  }
+}
+

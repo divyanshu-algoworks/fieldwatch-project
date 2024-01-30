@@ -1,0 +1,53 @@
+@import "../style.css.scss";
+
+#reported_incident_list_main_container {
+  @include simple_table;
+  @include modal_window;
+
+  .title_container {
+    margin-bottom: 16px;
+
+    .page_title {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+  }
+
+  .search_wrapper {
+    display: inline-block;
+    position: relative;
+    vertical-align: bottom;
+
+    .search_icon {
+      position: absolute;
+      top: 9px;
+      left: 10px;
+    }
+
+    input {
+      width: 240px;
+      height: 35px;
+      padding-left: 32px;
+    }
+  }
+
+  .modal_window {
+    .modal-header {
+      i {
+        font-size: 26px;
+        opacity: 1;
+        vertical-align: super;
+      }
+    }
+
+    .modal-body .icon {
+      font-size: 45px;
+      font-weight: normal;
+      opacity: 1;
+    }
+  }
+
+  .glyphicon_wrapper {
+    @include border_around_icon;
+  }
+}

@@ -1,0 +1,30 @@
+.quiz-view {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #fff;
+  overflow: auto;
+  &__title {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 24px;
+  }
+
+  &__description {
+    text-align: center;
+    font-size: 16px;
+    width: 66%;
+    margin: 15px auto;
+  }
+
+  &__questions {
+    width: 500px;
+    text-align: left;
+    margin: 0 auto;
+  }
+
+  &__question {
+    margin-bottom: 20px;
+  }
+}

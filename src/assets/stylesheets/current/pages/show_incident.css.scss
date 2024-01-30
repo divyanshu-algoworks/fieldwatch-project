@@ -1,0 +1,124 @@
+@import "../style.css.scss";
+
+#show_incident_main_container {
+  display: flex;
+  flex-flow: row wrap;
+  width: 1170px;
+
+  .page_title {
+    display: flex;
+    width: 100%;
+    font-size: 22px;
+    padding: 2px 0 0 10px;
+  }
+
+  .info_container {
+    display: flex;
+    flex-grow: 1;
+    flex-flow: column nowrap;
+    margin: 10px;
+    padding: 10px 12px;
+    background: #fff;
+    border: 1px solid #ccc;
+
+    &.links {
+      &>div:not(:first-child) {
+        color: $momo-cyan;
+      }
+    }
+
+    &.comments {
+      @include comment_element;
+    }
+
+    &.screenshots {
+      .screenshots_wrapper {
+        flex-flow: row wrap;
+        flex-basis: 100%;
+      }
+
+      img {
+        width: 150px;
+        height: 150px;
+        border:  1px solid #ddd;
+        margin: 5px 14px;
+      }
+    }
+
+    &.actions_history {
+      .information_row {
+        &>div:nth-child(1) {
+          flex-basis: calc(100% - 390px);
+        }
+        &>div:nth-child(2) {
+          flex-basis: 170px;
+        }
+        &>div:nth-child(3) {
+          flex-basis: 220px;
+        }
+      }
+    }
+
+    &.whole_line {
+      flex-basis: 99%;
+    }
+
+    &.one_half {
+      flex-basis: 48%;
+
+      .information_row {
+        &>div:nth-child(1) {
+          flex-basis: 170px;
+        }
+      }
+    }
+
+    &.one_third {
+      flex-basis: 30%;
+
+      .information_row {
+        max-width: 345px;
+        word-wrap: break-word;
+      }
+    }
+  }
+
+  .information_row {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 5px;
+
+    &.section_header {
+      //flex-basis: 100%;
+      font-size: 18px;
+      margin-top: -5px;
+      margin-bottom: 7px;
+      border-bottom: 1px solid #ddd;
+
+      &>div:first-child {
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+.fixed-header {
+  position: fixed;
+  width: 1170px;
+  height: 60px;
+  background-color: #f1f1f1;
+  z-index: 100;
+}
+
+.fixed-banner-header {
+  position: fixed;
+  width: 1170px;
+  z-index: 100;
+  margin-top: -6px;
+}
+
+.fixed-body {
+  padding-top: 10rem;
+  height: calc(100vh - 60px);
+}
+

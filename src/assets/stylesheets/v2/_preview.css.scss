@@ -1,0 +1,9 @@
+.preview {
+  &__label {
+    color: $fieldwatch-black-lighten;
+  }
+
+  &__value {
+    white-space: pre-wrap;
+  }
+}

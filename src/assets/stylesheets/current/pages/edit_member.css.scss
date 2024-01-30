@@ -1,0 +1,61 @@
+@import "../style.css.scss";
+
+#member_edit_main_container {
+  @include edit_member_form;
+  @include modal_window;
+  @include auth_modal_body;
+
+  .modal-title + div > div.col-xs-6 {
+    padding-right: 0px;
+  }
+
+  .save_button {
+    @include big_button($momo-cyan, $momo-cyan-hover);
+    height: 36px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 4px;
+  }
+
+  div.am-radio {
+    @include tooltip_right_size(-65px, 150px);
+    padding: 0;
+  }
+
+  .authy_button {
+
+    &.disable_authy {
+      @include big_button($momo-orange, $momo-orange-hover);
+      margin-left: 0;
+    }
+
+    &.enable_authy {
+      @include big_button($momo-grey, $momo-grey-hover);
+      margin-left: 0;
+    }
+  }
+
+  a.enable_authy:hover {
+    cursor: pointer;
+  }
+
+  label.authy_label {
+    color: $momo-orange;
+  }
+
+  .sms_description {
+    margin-bottom: 18px;
+
+    a {
+      cursor: pointer;
+    }
+  }
+
+  div.modal_window {
+    z-index: 1050 !important;
+  }
+
+  .go_back_button {
+    cursor: pointer;
+  }
+}

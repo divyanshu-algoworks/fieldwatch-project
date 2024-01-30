@@ -1,0 +1,40 @@
+.query-status {
+  text-align: center;
+  &__icon {
+    display: inline-block;
+    position: relative;
+    vertical-align: text-top;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    background: asset_url("play.svg") no-repeat;
+    background-size: contain !important;
+    &--active {
+      background: asset_url("pause.svg") no-repeat;
+    }
+  }
+}
+
+.query-form{
+  &__keyword-container{
+    display: flex;
+    margin-top: 5px;
+    justify-content: space-between;
+  }
+
+  &__keyword-error{
+    color: $fieldwatch-orange;
+  }
+
+  &__warning-icon{
+    font-size: 17px;
+    margin-right: 5px;
+  }
+
+  &__keyword-count{
+    font-size: 12px;
+    color: $fieldwatch-black;
+    background-color: $fieldwatch-grey-light;
+    padding: 0 10px;
+  }
+}

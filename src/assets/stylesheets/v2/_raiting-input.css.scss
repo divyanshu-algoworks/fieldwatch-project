@@ -1,0 +1,40 @@
+.raiting-input {
+  display: flex;
+
+  &__input {
+    display: none;
+  }
+
+  &__star {
+    height: 40px;
+    width: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+    cursor: pointer;
+
+    &--hovered {
+      color: $fieldwatch-orange;
+    }
+  }
+
+  &__icon {
+    height: 30px;
+    width: 30px;
+    border: 1px solid $fieldwatch-grey;
+    border-radius: 50%;
+    &--hover {
+      border-color: $fieldwatch-orange;
+      background-color: $fieldwatch-orange;
+    }
+  }
+
+  &__value {
+    position: absolute;
+    // font-size: 10px;
+    &--hover {
+      color: #fff;
+    }
+  }
+}

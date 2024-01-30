@@ -1,0 +1,39 @@
+.screenshot {
+  border: 1px solid #DBDBDB;
+  padding: 4px;
+  position: relative;
+
+  &__img {
+    cursor: pointer;
+    &--destroyed {
+      opacity: 0.1;
+      cursor: default;
+    }
+  }
+
+  &__progress {
+    height: 5px;
+  }
+
+  &__recover {
+    text-align: right;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    font-size: 14px;
+  }
+
+  &__info {
+    display: flex;
+    height: 24px;
+    align-items: center;
+  }
+
+  &__name {
+    flex: 1;
+    font-size: 11px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

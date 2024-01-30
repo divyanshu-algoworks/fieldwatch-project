@@ -1,0 +1,151 @@
+.tags-input {
+  border: $input-border;
+  position: relative;
+
+  &--invalid {
+    border: $invalid-input-border;
+  }
+
+  &--clearable {
+    padding-right: 25px;
+  }
+
+  padding: 6px 12px;
+
+  &__new-tag-input {
+    padding: 0;
+    margin-top: 10px;
+    max-width: 100%;
+    outline: none;
+    &,
+    &:focus {
+      border: none;
+      box-shadow: none;
+    }
+    border: 0;
+
+    &--disabled {
+      display: none;
+    }
+  }
+
+  &__tag {
+    user-select: none;
+    color: #fff;
+    background-color: $fieldwatch-blue;
+    display: inline-flex;
+    padding: 4px 6px;
+    margin: 5px 5px 0 0;
+
+    &--disabled {
+      background-color: $fieldwatch-grey;
+    }
+
+    &--selected {
+      background-color: $fieldwatch-grey;
+    }
+  }
+
+  &__tag-remove {
+    &,
+    &:hover,
+    &:focus {
+      color: #fff;
+      font-size: 14px;
+      opacity: 1;
+      margin-right: 3px;
+    }
+  }
+
+  &__list {
+    border: 1px solid #ccc;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    list-style: none;
+    background-color: #fff;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+
+  &__right-controls {
+    position: absolute;
+    right: 10px;
+  }
+
+  &__list-item {
+    padding: 6px 10px;
+    &--active {
+      color: #fff;
+      background-color: #3ea1d2;
+    }
+  }
+
+  &--disabled {
+    background-color: $input-disabled;
+  }
+}
+
+.reps-search {
+  margin-left: 85rem !important;
+}
+.reps-pagination {
+  text-align: right;
+}
+
+.rep-search-input {
+  text-align: end;
+  margin-bottom: 10px;
+}
+.tablink {
+  color: black;
+  border: ridge;
+  outline: none;
+  cursor: pointer;
+  padding: 9px 16px;
+  font-size: 17px;
+  min-width: 17%;
+}
+
+.tab-color {
+  background-color: #777;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+.min-w-tags {
+  min-height: 100px;
+}
+.min-h-words {
+  min-height: 300px;
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
+.tags-validation {
+  border-color: $fieldwatch-orange;
+}
+
+[contentEditable=true]:empty:not(:focus):before{
+  content:attr(data-text) }
+
+.main-incident-tab-color {
+  background-color: #0a8fcb;
+}
+
+.incident-tab-color {
+ background-color: #777;
+}
+
+.incident-tab {
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 4px 16px;
+  font-size: 14px;
+  min-width: 15%;
+}
+

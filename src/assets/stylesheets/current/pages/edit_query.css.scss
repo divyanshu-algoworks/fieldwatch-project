@@ -1,0 +1,197 @@
+@import "../style.css.scss";
+
+/***  Edit query page ***/
+
+
+#edit_query_main_container {
+  @include modal_window;
+  @include not_valid_input;
+  @include tooltip_top_bottom_size(175px);
+
+  .modal-footer {
+    button {
+      @include big_button($momo-cyan, $momo-cyan-hover);
+      padding-right: 10px;
+      padding-left: 10px;
+      height: 36px;
+    }
+  }
+
+  .panel {
+    border: 1px #DDDDDD solid;
+    overflow: hidden;
+    padding-right: 3px;
+
+    .panel {
+      margin-bottom: 7px;
+    }
+  }
+
+  .row {
+    //border-bottom: 1px #eee solid;
+    padding-top: 5px;
+    padding-right: 7px;
+  }
+
+  .table_title {
+    height: 57px;
+    padding-top: 6px;
+
+    .table_name {
+      font-size: 18px;
+      margin-top: 10px;
+      padding-left: 30px;
+    }
+  }
+
+  .update_query {
+    @include big_button($momo-cyan, $momo-cyan-hover);
+    height: 36px;
+  }
+
+  .narrow_row {
+    margin-top:4px;
+    height: 47px;
+
+    &>.col-xs-6 {
+      padding-right: 10px;
+
+      &> .text_element {
+        padding-right: 5px;
+      }
+
+      &>.input_element {
+        padding-left: 10px;
+        padding-right: 0;
+      }
+    }
+
+    .help_tooltip {
+      position: relative;
+      margin-left: 12px;
+      vertical-align: top;
+    }
+
+    .text_element {
+      font-size: 14px;
+      text-align: right;
+      margin-top: 7px;
+      padding-right: 0;
+    }
+
+    .two_row_text {
+      font-size: 11px;
+      margin-top: 4px;
+    }
+
+    .input_element {
+      padding-right: 9px;
+
+      select, input {
+        width: 100%;
+        box-shadow: none;
+        border-radius: 0px;
+        border: 1px solid #ddd;
+        height: 40px;
+        padding-left: 8px;
+        font-size: 13px;
+      }
+      select {
+        border: 1px solid transparent;
+      }
+    }
+  }
+
+  .label_element {
+    text-align: right;
+    padding-right: 0;
+    margin-top: 10px;
+  }
+
+  .label_text {
+    margin-bottom: 10px;
+    display: inline-block;
+    margin-right: 30px;
+  }
+
+  .tag_element {
+    margin-bottom: 8px;
+    margin-top: 3px;
+
+    .select2-container--default .select2-selection--multiple .select2-selection__choice {
+      background-color: $momo-cyan; /*#FFAC40;*/
+      color: #fff;
+    }
+
+    .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+      color: #fff;
+    }
+
+    span.select2-selection {
+      border-radius: 0px;
+      border: 1px solid #ddd;
+    }
+
+    ul {
+      min-height: 94px;
+    }
+  }
+
+  .help_tooltip {
+    @include help_tooltip;
+    position: absolute;
+    right: 0;
+  }
+
+  @include query_forms_fix;
+
+  .search_systems_row, .exact_match_row {
+    padding-top: 0;
+    margin-top: 0;
+    height: auto;
+  }
+
+  .search_checkbox_block {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin-top: 8px;
+    padding-left: 10px;
+
+    .accordion-search-systems {
+      margin-top: 3px;
+
+      a.accordion-link {
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      .collapsed-block {
+        margin-top: 10px;
+      }
+    }
+
+    &>.form-group {
+      margin-bottom: 8px;
+      margin-left: 5px;
+    }
+
+    .search_checkbox_element {
+      display: flex;
+
+      .am-checkbox {
+        padding: 0;
+      }
+    }
+  }
+
+  .exact_match_checkbox {
+    padding-left: 10px !important;
+  }
+}
+
+.select2-selection__choice {
+  &--danger {
+    background-color: #ee0000 !important;
+  }
+}

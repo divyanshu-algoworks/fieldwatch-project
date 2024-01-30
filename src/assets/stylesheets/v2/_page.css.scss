@@ -1,0 +1,18 @@
+.page {
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  &__header-title {
+    font-size: 18px;
+    color: #aaa;
+  }
+}
+
+.non-fw-warning{
+  color: orange;
+  text-align: center;
+}

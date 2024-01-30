@@ -1,0 +1,146 @@
+.fw-radio {
+  margin: 0;
+  height: 22px;
+  padding-left: 22px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  &+.fw-radio {
+    margin-left: 10px;
+  }
+  &:hover &__indicator {
+    border-color: $fieldwatch-grey;
+  }
+
+  &:hover &__indicator--checked {
+    border-color: $fieldwatch-blue;
+  }
+
+  &:hover &__indicator--correct {
+    color: rgba(0, 183, 119, 0.58);
+    border-color: rgba(0, 183, 119, 0.58);
+  }
+
+  &:hover &__indicator--invalid {
+    color: $fieldwatch-orange;
+    border-color: $fieldwatch-orange;
+  }
+
+  &__indicator {
+    display: inline-flex;
+    position: absolute;
+    font-weight: 700;
+    font-size: 14px;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    height: 22px;
+    width: 22px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: $fieldwatch-grey-light;
+    color: $fieldwatch-blue;
+    border-radius: 50%;
+    // TODO: change to FontAwesome in future
+    font-family: 'Stroke 7';
+    &:before {
+      content: '';
+    }
+    &--checked {
+      border-color: $fieldwatch-blue;
+      &:before {
+        content: "\e6ce";
+      }
+    }
+
+    &--invalid {
+      border-color: $fieldwatch-orange;
+    }
+
+    &--correct {
+      color: rgba(0, 183, 119, 0.58);
+      border-color: rgba(0, 183, 119, 0.58);
+    }
+  }
+  &__label-text {
+    display: inline-block;
+    font-weight: 400;
+    margin-left: 5px;
+    &--invalid {
+      color: $fieldwatch-orange;
+    }
+  }
+
+  &__input {
+    display: none;
+  }
+}
+
+.public-radio {
+  margin: 0;
+  height: 22px;
+  padding-left: 22px;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+
+  &__indicator {
+    display: inline-flex;
+    position: absolute;
+    font-weight: 700;
+    font-size: 14px;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    height: 22px;
+    width: 22px;
+    background-color: $fieldwatch-blue;
+    color: $fieldwatch-blue;
+    border-radius: 50%;
+    &:before {
+      transition: 200ms;
+      content: ' ';
+      width: 20px;
+      height: 20px;
+      background-color: #fff;
+      border-radius: 50%;
+    }
+
+    &--correct {
+      background-color: #66994c;
+      border-color: #66994c;
+    }
+
+    &--invalid {
+      background-color: #b5b5b5;
+      border-color: #b5b5b5;
+    }
+  }
+
+  &__label-text {
+    display: inline-block;
+    font-weight: 400;
+    margin-left: 5px;
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &:not(.public-radio--disabled):hover &__indicator:before,
+  &__indicator--checked:before {
+    height: 10px;
+    width: 10px;
+  }
+  &--disabled {
+    opacity: 0.8;
+  }
+}
+.radio-margin {
+  margin-left: 25px;
+  margin-top: 5px;
+}
+
+.radio-margin-top {
+margin-top: 5px;
+}

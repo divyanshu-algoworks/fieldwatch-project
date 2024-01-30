@@ -1,0 +1,13 @@
+@import "../style.css.scss";
+
+#compliance_actions_main_container {
+  @include account_preferences_particle;
+
+  th:nth-child(2) {
+    width: 90px;
+  }
+
+  .right_part a {
+    border-radius: 0;
+  }
+}

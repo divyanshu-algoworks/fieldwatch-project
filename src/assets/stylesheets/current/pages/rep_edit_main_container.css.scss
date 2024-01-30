@@ -1,0 +1,292 @@
+@import "../style.css.scss";
+
+/***  Client edit page ***/
+
+#rep_edit_main_container {
+  @include not_valid_input;
+  padding: 0;
+
+  .dossier_export_btn {
+    @include big_button($momo-grey !important, $momo-grey-hover !important);
+    vertical-align: bottom;
+  }
+
+  .save_rep_title_row {
+    .save_rep_title {
+      max-width: 330px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .save_rep {
+      max-width: 240px;
+      white-space: nowrap;
+
+      & > div {
+        max-width: 240px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+
+  }
+
+  .side_menu {
+    div {
+      background: #fff;
+      height: 40px;
+      cursor: pointer;
+
+      &:hover {
+        background: #eee;
+      }
+
+      &.active {
+        &:hover {
+          background: #fff;
+        }
+
+        a {
+          color: $momo-cyan;
+          cursor: default;
+        }
+      }
+
+      a {
+        display: block;
+        padding-left: 15px;
+        padding-top: 10px;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        color: #333;
+
+        &:hover {
+          color: $momo-cyan;
+        }
+      }
+    }
+  }
+
+  .rep_imports_particle {
+    .pointer {
+      @include big_button($momo-cyan, $momo-cyan-hover);
+      display: inline-block;
+      padding: 12px 6px 0 6px;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  #basic_api_usage {
+    @include modal_window;
+
+    .modal-dialog {
+      width: 800px;
+    }
+
+    .modal-body {
+      padding-top: 15px;
+      padding-bottom: 20px;
+      text-align: justify;
+
+      .code_particle {
+        background: #F5F5F5;
+        padding: 5px;
+      }
+
+      button.close {
+        position: absolute;
+        right: 3px;
+        top: 3px;
+      }
+    }
+  }
+
+  .content_container {
+    @include interactive_logo;
+    background: #fff;
+
+    .title_row {
+      @include title_row(51px, 7px);
+      margin-bottom: 10px;
+
+      p {
+        margin-left: 15px;
+        margin-top: 8px;
+      }
+    }
+
+    .save_button {
+      @include big_button($momo-cyan, $momo-cyan-hover);
+      margin-right: 10px;
+      height: 36px;
+    }
+
+    .panel-body {
+      padding: 0;
+
+      .form-group {
+        padding: 0;
+        margin-bottom: 10px;
+
+        &:last-child {
+          margin-top: -8px;
+        }
+
+        .am-checkbox {
+          padding: 2px 0;
+          margin-left: 2px;
+        }
+      }
+    }
+
+    label {
+      padding-left: 0;
+      padding-right: 0;
+      font-weight: normal;
+
+      &.align-right {
+        padding-top: 5px;
+      }
+    }
+
+    input {
+      border-radius: 0;
+    }
+
+    .info_container {
+      padding-right: 26px;
+      padding-left: 0;
+
+      div {
+        width: 100%;
+        height: 83px;
+        background: #F4F8FE;
+        border: 1px solid #C5DBFB;
+
+        &:first-child {
+          border-bottom: none;
+        }
+      }
+
+      p {
+        font-size: 10px;
+        margin-bottom: 0;
+        text-align: center;
+        text-transform: uppercase;
+
+        &:first-child {
+          margin-top: 20px;
+          font-weight: bold;
+          text-transform: none;
+        }
+      }
+    }
+  }
+
+  .client_list_content {
+    @include clients_list;
+  }
+
+  .edit_territory_content, .edit_language_content, .edit_rep_status_content, .incident_rep_ranks_content {
+    .title_row {
+      margin-bottom: 0;
+
+      p {
+        font-size: 20px;
+      }
+    }
+
+    label {
+      padding-top: 5px;
+    }
+
+    .element_container {
+      padding-top: 7px;
+      padding-bottom: 7px;
+      margin: 0;
+    }
+
+    .element_wrapper {
+      padding-right: 10px;
+    }
+  }
+
+  .edit_rep_status_content, .incident_rep_ranks_content {
+    .title_row p {
+      font-size: 17px;
+    }
+  }
+
+  .rep_statuses_content, .statuses_main_content, .rep_ranks_content, .categories_content, .policies_content,
+  .risk_levels_content, .field_submissions_content {
+    @include account_preferences_particle;
+
+    table thead {
+      th:nth-child(1) {
+        padding-left: 16px;
+        width: 115px;
+      }
+
+      th:nth-child(3) {
+        width: 15px;
+      }
+    }
+  }
+
+  .rep_statuses_content, .statuses_main_content, .rep_ranks_content, .categories_content, .risk_levels_content {
+    @include drag_style(100px, 670px, 100px);
+  }
+
+  .territories_content, .languages_content, .users_content {
+    @include account_preferences_particle;
+
+    table thead {
+      th:nth-child(1) {
+        padding-left: 16px;
+      }
+
+      th:nth-child(2) {
+        width: 90px;
+      }
+    }
+  }
+
+  .incident_statuses_content, .edit_policy_content, .edit_risk_level_content, .edt_category_content {
+    @include edit_incident_form;
+
+    .title_row {
+      background: #fff;
+      margin-bottom: 5px;
+
+      & > div:first-child {
+        font-size: 20px;
+        padding-left: 0;
+      }
+
+      .text-right {
+        padding-right: 4px;
+      }
+    }
+
+    .category_wrapper {
+      margin-bottom: 5px;
+      background: #fff;
+      padding: 5px 0;
+
+      .name_element {
+        padding-top: 6px;
+        padding-right: 5px;
+      }
+
+      .select_wrapper {
+        padding-right: 30px;
+        padding-left: 23px;
+      }
+    }
+  }
+}

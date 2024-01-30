@@ -1,0 +1,32 @@
+.results-drop-tabs {
+  position: fixed;
+  width: 100%;
+  top: 100px;
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin: 0;
+    padding: 0;
+    margin: 0 -15px;
+  }
+
+  &__list-item {
+    height: 100px;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0.8;
+    color: #f0f0f0;
+    border: 1px solid $fieldwatch-black;
+    background: $fieldwatch-black;
+
+    &--active {
+      opacity: 1;
+      border-color: $fieldwatch-orange;
+    }
+  }
+}

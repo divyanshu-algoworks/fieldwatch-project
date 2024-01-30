@@ -1,0 +1,34 @@
+@import "../style.css.scss";
+
+.company_info_content {
+  .title_row {
+    margin-bottom: 0;
+
+    p {
+      font-size: 20px;
+    }
+  }
+
+  label {
+    padding-top: 5px;
+  }
+
+  .element_container {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin: 0;
+
+    &:last-of-type {
+      padding-bottom: 15px;
+    }
+  }
+
+  .element_wrapper {
+    padding-right: 10px;
+
+    input {
+      background: #fff;
+      box-shadow: none;
+    }
+  }
+}

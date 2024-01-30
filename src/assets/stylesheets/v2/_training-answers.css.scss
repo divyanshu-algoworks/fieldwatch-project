@@ -1,0 +1,20 @@
+.training-answers {
+  margin: 0 0 10px 0;
+  padding: 0;
+  list-style: none;
+
+  &__answer {
+    border: 1px solid transparent;
+    padding: 5px 10px 5px 0;
+    &--correct {
+      border-color: rgba(0, 183, 119, 0.55);
+      background-color: rgba(0, 128, 0, 0.1);
+    }
+  }
+
+  &__answer-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

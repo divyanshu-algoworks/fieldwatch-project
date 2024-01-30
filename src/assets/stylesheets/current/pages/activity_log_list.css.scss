@@ -1,0 +1,61 @@
+@import "../style.css.scss";
+
+#activity_log_main_container {
+  @include simple_table;
+  @include table_footer;
+  @include modal_window;
+  padding-top: 2px;
+
+  .panel {
+    border: none;
+    margin-bottom: 8px;
+  }
+
+  .panel-header {
+    padding-left: 11px;
+    @include filter_container;
+
+    .filter_button {
+      @include small_button($momo-cyan);
+      margin-left: 15px;
+      margin-right: 10px;
+    }
+
+    .title_wrapper div {
+      @include tooltip_right_size(-50px, 150px);
+      display: inline-block;
+    }
+
+    .filter_help {
+      vertical-align: sub;
+    }
+
+    .filters {
+      border-bottom: 1px solid #E4E4E4;
+      padding: 0;
+      padding-top: 18px;
+      text-align: center;
+    }
+  }
+
+  .table_wrapper {
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+
+    thead {
+      border-bottom: 1px solid #e4e4e4;
+    }
+
+    th span {
+      @include border_around_icon;
+    }
+  }
+}
+
+
+@media only screen
+and (max-device-width: 1024px) {
+  #activity_log_main_container {
+    @include tablet_additional_filters;
+  }
+}

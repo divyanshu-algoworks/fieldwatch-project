@@ -1,14 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
+import { Provider } from "mobx-react";
+import stores from './stores/index';
+import { rehydrate } from "rfx-core";
 import reportWebVitals from './reportWebVitals';
+import { DragDropContextProvider } from "react-dnd";
+import HTML5Backend from "react-dnd-html5-backend";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const store = rehydrate();
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
+  <DragDropContextProvider backend={HTML5Backend}>
+    <Provider store={store}>
     <App />
-  </React.StrictMode>
+    </Provider>
+    </DragDropContextProvider>
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

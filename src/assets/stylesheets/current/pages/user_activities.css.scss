@@ -1,0 +1,22 @@
+@import "../_mixins.css.scss";
+
+.incident-action {
+  display: flex;
+  align-items: center;
+  &__icon {
+    margin-right: 5px;
+  }
+}
+
+.result-action-ua {
+  &__link {
+    display: inline-flex;
+    @include ellipsis(400px);
+    white-space: nowrap;
+  }
+}
+
+.result-search-ua {
+  display: flex;
+  justify-content: flex-end;
+}

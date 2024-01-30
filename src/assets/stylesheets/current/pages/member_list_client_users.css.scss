@@ -1,0 +1,72 @@
+@import "../style.css.scss";
+
+#member_list_main_container, #clients_users_main_container, #client_edit_main_container {
+  @include clients_list;
+  @include first_last_th_corrector;
+
+  .page-header {
+    padding-right: 11px;
+
+    h1.modal-title {
+      font-size: 20px;
+      margin-top: 8px;
+    }
+
+    .right_part div {
+      display: inline-block;
+      vertical-align: bottom;
+    }
+
+    .export_users {
+      @include big_button($momo-grey, $momo-grey-hover);
+      height: 32px;
+    }
+  }
+
+  .locked {
+    color: #3EABDC;
+  }
+
+  .search_wrapper {
+    position: relative;
+
+    input {
+      width: 200px;
+      height: 32px;
+      padding-left: 25px;
+    }
+
+    .search_icon {
+      position: absolute;
+      font-size: 16px;
+      font-weight: bold;
+      top: 8px;
+      left: 5px;
+    }
+  }
+
+  .right_part a {
+    border-radius: 0;
+  }
+
+  table {
+    span.pointer {
+      margin-right: 12px;
+    }
+
+    span.pointer {
+      &.s7-close-circle, &.s7-lock {
+        margin-right: 17px;
+      }
+    }
+
+    td.actions {
+      width: 107px;
+    }
+  }
+}
+
+.locked_label {
+  @include filled_label($momo-cyan-hover, 'LOCKED');
+  margin-left: 10px;
+}

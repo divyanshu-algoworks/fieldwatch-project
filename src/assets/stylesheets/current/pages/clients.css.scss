@@ -1,0 +1,44 @@
+@import "../style.css.scss";
+
+/***  Clients page ***/
+
+#clients_main_container {
+  @include clients_list;
+  @include first_last_th_corrector;
+
+  .page-header {
+    padding-right: 11px;
+
+    h1.modal-title {
+      font-size: 20px;
+      margin-top: 8px;
+    }
+
+    .right_part div {
+      display: inline-block;
+      vertical-align: bottom;
+    }
+  }
+
+  .search_wrapper {
+    position: relative;
+
+    input {
+      width: 200px;
+      height: 32px;
+      padding-left: 25px;
+    }
+
+    .search_icon {
+      position: absolute;
+      font-size: 16px;
+      font-weight: bold;
+      top: 8px;
+      left: 5px;
+    }
+  }
+
+  .right_part a {
+    border-radius: 0;
+  }
+}

@@ -1,0 +1,18 @@
+.graph-container {
+  display: flex;
+  &--nano{
+    height: 100px;
+  }
+
+  &--small {
+    height: 255px;
+  }
+
+  &--default {
+    height: 320px;
+  }
+
+  &--large {
+    height: 500px;
+  }
+}

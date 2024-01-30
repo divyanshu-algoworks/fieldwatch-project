@@ -1,0 +1,337 @@
+@import "../style.css.scss";
+
+/***  Client edit page ***/
+
+#client_edit_main_container {
+  @include not_valid_input;
+  @include modal_window;
+  @include auth_modal_body;
+  padding: 0;
+
+  .authy_button {
+
+    &.disable_authy {
+      @include big_button($momo-orange, $momo-orange-hover);
+      margin: 5px 0;
+    }
+
+    &.enable_authy {
+      @include big_button($momo-grey, $momo-grey-hover);
+      margin: 5px 0;
+    }
+  }
+  a.enable_authy {
+    cursor: pointer;
+  }
+
+  .form-control.not_valid {
+    border-color: $momo-orange;
+  }
+
+  label.authy_label {
+    color: $momo-orange;
+  }
+
+  .side_menu {
+    div {
+      background: #fff;
+      height: 40px;
+      cursor: pointer;
+
+      &:hover {
+        background: linear-gradient(90deg, $momo-cyan 2%, #fff 2%);
+      }
+
+      &.active {
+        &:hover {
+          background: #fff;
+        }
+
+        a {
+          color: $momo-cyan;
+          cursor: default;
+        }
+      }
+
+      a {
+        display: block;
+        padding-left: 15px;
+        padding-top: 10px;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        color: #333;
+      }
+    }
+  }
+
+  .rep_imports_content #rep-import-instraction {
+    .modal-header {
+      padding-bottom: 10px;
+    }
+  }
+
+  .modal_window .code_particle {
+    background: #F5F5F5;
+    padding: 5px;
+  }
+
+  .content_container {
+    @include interactive_logo;
+    background: #fff;
+
+    .title_row {
+      @include title_row(51px, 7px);
+      margin-bottom: 10px;
+
+      p {
+        margin-left: 15px;
+        margin-top: 8px;
+      }
+    }
+
+    .save_button {
+      @include big_button($momo-cyan, $momo-cyan-hover);
+      margin-right: 10px;
+      height: 36px;
+    }
+
+    .panel-body {
+      padding: 0;
+
+      .form-group {
+        padding: 0;
+        margin-bottom: 10px;
+
+        &:last-child {
+          margin-top: -8px;
+        }
+
+        .am-checkbox {
+          padding: 2px 0;
+          margin-left: 2px;
+        }
+      }
+    }
+
+    label {
+      padding-left: 0;
+      padding-right: 0;
+      font-weight: normal;
+
+      &.align-right {
+        padding-top: 5px;
+      }
+    }
+
+    input {
+      border-radius: 0;
+    }
+
+    .info_container {
+      padding-right: 26px;
+      padding-left: 0;
+
+      div {
+        width: 100%;
+        height: 83px;
+        background: #F4F8FE;
+        border: 1px solid #C5DBFB;
+
+        &:first-child {
+          border-bottom: none;
+        }
+      }
+
+      p {
+        font-size: 10px;
+        margin-bottom: 0;
+        text-align: center;
+        text-transform: uppercase;
+
+        &:first-child {
+          margin-top: 20px;
+          font-weight: bold;
+          text-transform: none;
+        }
+      }
+    }
+  }
+
+  .client_list_content {
+    @include clients_list;
+  }
+
+  .edit_territory_content, .edit_language_content, .edit_rep_status_content, .incident_rep_ranks_content,
+  .field_submissions_content {
+    .title_row {
+      margin-bottom: 0;
+
+      p {
+        font-size: 20px;
+      }
+    }
+
+    label {
+      padding-top: 5px;
+    }
+
+    .element_container {
+      padding-top: 7px;
+      padding-bottom: 7px;
+      margin: 0;
+    }
+
+    .element_wrapper {
+      padding-right: 10px;
+    }
+  }
+
+  .edit_rep_status_content, .incident_rep_ranks_content {
+    .title_row p {
+      font-size: 17px;
+    }
+  }
+
+  .rep_statuses_content, .statuses_main_content, .rep_ranks_content, .categories_content, .policies_content,
+  .risk_levels_content, .field_submissions_content {
+    @include account_preferences_particle;
+
+    table thead {
+      th:nth-child(1) {
+        padding-left: 16px;
+        width: 115px;
+      }
+
+      th:nth-child(3) {
+        width: 15px;
+      }
+    }
+  }
+
+  .field_submissions_content {
+    @include wysiwyg_editor;
+    .information_row {
+      display: flex;
+      margin-top: 10px;
+      .message {
+        font-size: 16px;
+        margin-left: 5px;
+      }
+    }
+  }
+
+  .policies_content .actions {
+    width: 76px;
+  }
+
+  .rep_statuses_content, .statuses_main_content, .rep_ranks_content, .categories_content, .risk_levels_content,
+  .compliance_actions_main_content {
+    @include drag_style(100px, 670px, 100px);
+  }
+
+  .territories_content, .languages_content, .users_content {
+    @include account_preferences_particle;
+
+    table thead {
+      th:nth-child(1) {
+        padding-left: 16px;
+      }
+
+      th:nth-child(2) {
+        width: 90px;
+      }
+    }
+  }
+
+  .risk_levels_content tr.draggable_row>td:nth-child(2) {
+    overflow: hidden;
+    max-width: 670px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .incident_statuses_content, .edit_policy_content, .edit_risk_level_content, .edt_category_content {
+    @include edit_incident_form;
+
+    .title_row {
+      background: #fff;
+      margin-bottom: 5px;
+
+      & > div:first-child {
+        font-size: 20px;
+        padding-left: 0;
+      }
+
+      .text-right {
+        padding-right: 4px;
+      }
+    }
+
+    .category_wrapper {
+      margin-bottom: 5px;
+      background: #fff;
+      padding: 5px 0;
+
+      .name_element {
+        padding-top: 6px;
+        padding-right: 5px;
+      }
+
+      .select_wrapper {
+        padding-right: 30px;
+        padding-left: 23px;
+      }
+    }
+  }
+
+  .edt_category_content, .incident_statuses_content {
+    textarea {
+      margin-bottom: 5px;
+    }
+  }
+
+  .edit_policy_content {
+    textarea {
+      padding-left: 10px;
+      margin-bottom: 7px;
+    }
+
+    @include wysiwyg_editor;
+
+    .information_row.description_row {
+      height: 100% !important;
+    }
+  }
+
+  .users_content {
+    thead tr {
+      th:nth-child(3) {
+        width: 75px;
+      }
+    }
+
+    span.glyphicon.glyphicon-plus {
+      font-size: 12px;
+    }
+
+    td.actions {
+      width: 105px;
+    }
+  }
+
+  #rep-csv-import-modal {
+    .modal-header, .modal-footer {
+      width: 100%;
+    }
+  }
+
+  .table_footer .right_side ul {
+    max-width: 450px;
+    width: 100%;
+    position: absolute;
+    right: 15px;
+    display: flex;
+    justify-content: flex-end;
+  }
+}

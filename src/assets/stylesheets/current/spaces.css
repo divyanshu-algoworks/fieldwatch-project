@@ -1,0 +1,195 @@
+.ptn, .pvn, .pan {
+  padding-top: 0 !important;
+}
+
+.pts, .pvs, .pas {
+  padding-top: 10px !important;
+}
+
+.ptm, .pvm, .pam {
+  padding-top: 20px !important;
+}
+
+.ptl, .pvl, .pal {
+  padding-top: 40px !important;
+}
+
+.prn, .phn, .pan {
+  padding-right: 0 !important;
+}
+
+.prs, .phs, .pas {
+  padding-right: 10px !important;
+}
+
+.prm, .phm, .pam {
+  padding-right: 20px !important;
+}
+.prl, .phl, .pal {
+  padding-right: 40px !important;
+}
+
+.pbn, .pvn, .pan {
+  padding-bottom: 0 !important;
+}
+
+.pbxs, .pvxs, .paxs {
+  padding-bottom: 5px !important;
+}
+
+.pbs, .pvs, .pas {
+  padding-bottom: 10px !important;
+}
+
+.pbm, .pvm, .pam {
+  padding-bottom: 20px !important;
+}
+
+.pbl, .pvl, .pal {
+  padding-bottom: 40px !important;
+}
+
+.pln, .phn, .pan {
+  padding-left: 0 !important;
+}
+
+.pls, .phs, .pas {
+  padding-left: 10px !important;
+}
+
+.plm, .phm, .pam {
+  padding-left: 20px !important;
+}
+
+.pll, .phl, .pal {
+  padding-left: 40px !important;
+}
+
+.mtn, .mvn, .man {
+  margin-top: 0px !important;
+}
+
+.mtxs, .mvxs, .maxs {
+  margin-top: 5px !important;
+}
+
+.mts, .mvs, .mas {
+  margin-top: 10px !important;
+}
+
+.mtm, .mvm, .mam {
+  margin-top: 20px !important;
+}
+
+.mtl, .mvl, .mal {
+  margin-top: 40px !important;
+}
+
+.mrn, .mhn, .man {
+  margin-right: 0px !important;
+}
+
+.mrs, .mhs, .mas {
+  margin-right: 10px !important;
+}
+
+.mrm, .mhm, .mam {
+  margin-right: 20px !important;
+}
+
+.mrl, .mhl, .mal {
+  margin-right: 40px !important;
+}
+
+.mbn, .mvn, .man {
+  margin-bottom: 0px !important;
+}
+
+.mbxs, .mvxs, .maxs {
+  margin-bottom: 5px !important;
+}
+
+.mbs, .mvs, .mas {
+  margin-bottom: 10px !important;
+}
+
+.mbm, .mvm, .mam {
+  margin-bottom: 20px !important;
+}
+
+.mbl, .mvl, .mal {
+  margin-bottom: 40px !important;
+}
+
+.mln, .mhn, .man {
+  margin-left: 0px !important;
+}
+
+.mls, .mhs, .mas {
+  margin-left: 10px !important;
+}
+
+.mlm, .mhm, .mam {
+  margin-left: 20px !important;
+}
+
+.mll, .mhl, .mal {
+  margin-left: 40px !important;
+}
+
+.ptx, .pvx, .pax {
+  padding-top: 5px !important;
+}
+
+.prx, .phx, .pax {
+  padding-right: 5px !important;
+}
+
+.pbx, .pvx, .pax {
+  padding-bottom: 5px !important;
+}
+
+.plx, .phx, .pax {
+  padding-left: 5px !important;
+}
+
+.mtx, .mvx, .max {
+  margin-top: 5px !important;
+}
+
+.mrx, .mhx, .max {
+  margin-right: 5px !important;
+}
+
+.mbx, .mvx, .max {
+  margin-bottom: 5px !important;
+}
+
+.mlx, .mhx, .max {
+  margin-left: 5px !important;
+}
+
+.ps {
+  padding: 10px;
+}
+
+.pz {
+  padding: 0
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.clear {
+  clear: both;
+}
+
+.center {
+  text-align: center;
+}
+

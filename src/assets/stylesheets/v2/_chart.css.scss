@@ -1,0 +1,15 @@
+.fw-chart {
+  padding-top: 10px;
+  position: relative;
+
+  &__msg {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    white-space: pre-line;
+    text-align: center;
+    color: #bbb;
+  }
+}
