@@ -2,12 +2,17 @@ import React, { Component, useEffect } from "react";
 import Input from '../../components/Input';
 import { inject, observer } from "mobx-react";
 import { Navigate } from "react-router-dom";
-// import fieldwatch_logo_small from '../../assets/images/fie'
+import fieldWatchLogo from '../../assets/images/fieldwatch_logo_small.png';
 import CommonForm from "../../components/CommonForm";
+import { checkRequired } from "../../helpers/validators";
 @inject("store")
 @observer
 export default class Login extends CommonForm {
   //modelName = 'user'
+  validators = {
+    email: checkRequired('email'),
+    password: checkRequired('password')
+  }
   url = '/api/v1/case_management/users/sign_in'
   constructor(props) {
     super(props);
@@ -25,7 +30,7 @@ export default class Login extends CommonForm {
   this.setState({ loggedIn: true })
   }
   render() {
-    console.log(this.state.item)
+    console.log(this.validationMessages)
     return (
       <React.Fragment>
       {this.state.loggedIn && <Navigate to="/dashboard" />}
@@ -38,7 +43,7 @@ export default class Login extends CommonForm {
                 <div className="panel panel-default">
                   <div className="panel-heading">
                     <div className="logo_image">
-                      {/* <img src ={fieldwatch_logo_small}/> */}
+                      <img src ={fieldWatchLogo}/>
                     </div>
                     <span>Please enter your user information.</span>
                   </div>
@@ -56,7 +61,7 @@ export default class Login extends CommonForm {
                         <div className="input-group">
                           <span className="input-group-addon">
                             <i className="icon s7-lock"></i>
-                            <Input placeholder="Password" value={this.state.item.password} className="w-100p" onChange={this.handleChangePassword} />
+                            <Input placeholder="Password" type="password" value={this.state.item.password} className="w-100p" onChange={this.handleChangePassword} />
                           </span>
                         </div>
                       </div>

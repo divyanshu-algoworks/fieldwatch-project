@@ -1,8 +1,10 @@
 import getToken from './getToken';
 import { toQueryString } from './url';
+import { toast } from "react-toastify";
 
 function showRequestNotification(status, res = {}) {
   const body = res.body && JSON.parse(res.body);
+  debugger
   if (status === 200 || status === 204) {
     return;
   }
@@ -11,7 +13,9 @@ function showRequestNotification(status, res = {}) {
   }
   if (status === 401) {
     // FW.flash({ type: 'info', text: 'Your session has been expired' });
-    window.location.reload(false)
+    toast.error('Invalid Creds');
+    return;
+   // window.location.reload(false)
   } 
   // else if (status === 422) {
   //   FW.flash({
@@ -40,8 +44,10 @@ export default class API {
   };
 
   static getUrl(url, searchParams) {
-    const emailToken = JSON.parse(localStorage.getItem('userInfoState')).userToken;
-    let resUrl = `${url}?email_token=${emailToken}`;
+    let emailToken;
+    if (!url.includes('sign_in')) 
+    emailToken =  JSON.parse(localStorage.getItem('userInfoState'))?.userToken;
+    let resUrl = emailToken ? `${url}?email_token=${emailToken}` : url ;
     if (!!searchParams) {
       const paramsStr = toQueryString(searchParams);
       if (!!paramsStr.length) {
@@ -69,13 +75,18 @@ export default class API {
         headers,
       })
         .then((res) => {
+           debugger
+          // if(res.status === 401) {
+          //   alert('Unauthorised');
+          // }
           if (res.ok) {
             return res.json();
           }
           showRequestNotification(res.status, params);
-          resolve({});
+          //reject({});
         })
         .then((res) => {
+          debugger
           if (res.redirect) {
             window.location.href = res.redirect;
           }

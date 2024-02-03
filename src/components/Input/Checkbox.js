@@ -15,8 +15,9 @@ const Checkbox = (props) => {
         'fw-checkbox__indicator--checked': checked,
         'fw-checkbox__indicator--disabled': disabled,
         'disabled_element': false,
-         'h-w-17p': popUpClass
+         'h-w-17p': popUpClass,
       })}></div>
+      <i class="fa-regular fa-check"></i>
       <input type="checkbox" id={id} className={classnames('fw-checkbox__input', className)} checked={checked}
         disabled={disabled} name={name} readOnly={readOnly}
         onChange={onChange} />

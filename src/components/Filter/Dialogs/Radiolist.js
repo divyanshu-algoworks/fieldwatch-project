@@ -36,7 +36,7 @@ export class Radiolist extends Common {
                         return (
                             <div className="grid__col grid__col--4 filter-dialog__checkbox"
                                 key={item.id}>
-                                <Tooltip body={label}>
+                                {/* <Tooltip body={label}> */}
                                     <label className="fw-checkbox">
                                         <div className={classnames(`fw-checkbox__indicator`, {
         [`fw-checkbox__indicator--checked`]: item.checked
@@ -45,7 +45,7 @@ export class Radiolist extends Common {
                                             checked={this.state.selected==item.id?true:false}
                                             onClick={(e) => { this.handleChangeCheckbox(item, e.target.checked) }} />
                                         <div className="fw-checkbox__label-text">{label}</div></label>
-                                </Tooltip>
+                                {/* </Tooltip> */}
                             </div>
                         );
                     })}

@@ -32,12 +32,71 @@
 @import './v2/results-side-actions.css.scss';
 @import './v2/_page.css.scss';
 @import './current/header_nav_menu.css.scss';
+@import './v2/filter-dialog.css.scss';
+@import './v2/filter-label.css.scss';
+@import './v2/filters-container.css.scss';
+@import './v2/filters-list-select.css.scss';
+@import './v2/filters.css.scss';
+@import './v2/checkbox.css.scss';
+@import './v2/grid.css.scss';
+@import './v2/flex-grid.css.scss';
+@import './v2/dialog.css.scss';
+@import './current/bootstrap_and_overrides.css.scss';
 
 
+table thead tr {
+  border-bottom: 1px solid #e4e4e4 !important;
+}
+.topnav {
+  background-color: #464547;
+  overflow: hidden;
+}
+.navbar-nav > li {
+  font-size: medium;
+  margin: 0px 5px 0px 5px;
+}
 
+/* Style the links inside the navigation bar */
+.dropdown-item {
+  color: white;
+}
 
+.dropdown-menu-dark .dropdown-item {
+  color: black;
+}
 
+.bg-dark {
+  background-color: #464547 !important
+}
 
+.user-icon {
+  font-size: x-large;
+  color: white;
+  margin-right: 70px;
+  
+}
 
+.dropdown-menu {
+  min-width: 120px !important
+}
+
+.nav-item {
+list-style: none;
+}
+
+.dropdown-toggle::after { 
+  display: none;
+}
+
+.dropdown-menu-dark .dropdown-item:hover  {
+  background-color: darkgray;
+}
+
+.nav_divider {
+  background: #aaa;
+    height: 30px;
+    width: 1px;
+    margin-top: 10px !important;
+}
 
 

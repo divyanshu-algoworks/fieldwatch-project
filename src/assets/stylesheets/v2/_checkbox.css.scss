@@ -1,3 +1,5 @@
+@import './variables.css.scss';
+
 .fw-checkbox {
   margin: 0;
   height: 22px;
@@ -44,7 +46,7 @@
     border-color: $fieldwatch-grey-light;
     color: $fieldwatch-blue;
     // TODO: change to FontAwesome in future
-    font-family: 'Stroke 7';
+    font-family: 'FontAwesome';
     background-color: #fff;
     &--small {
       width: 15px;

@@ -6,9 +6,10 @@ import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 function getSortIcon(sorting, column) {
   if (column.accessor !== sorting.sortColumn) {
-    return 'glyphicon glyphicon-sort';
+    return 'fa fa-sort';
   }
-  return `glyphicon glyphicon-sort-by-attributes${sorting.sortDirection === 'desc' ? '-alt' : ''}`;
+  //return `glyphicon glyphicon-sort-by-attributes${sorting.sortDirection === 'desc' ? '-alt' : ''}`;
+  return sorting.sortDirection !== 'desc' ? 'fa fa-sort-amount-asc' : 'fa fa-sort-amount-desc'
 }
 
 /**

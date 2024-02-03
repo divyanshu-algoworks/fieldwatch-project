@@ -30,6 +30,7 @@ $momo-orange-hover: #FFAE44;
 
 .ellipsis {
   @include ellipsis();
+  white-space: nowrap;
 }
 
 .no_padding {

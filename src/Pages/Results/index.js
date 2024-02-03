@@ -41,7 +41,7 @@ export default class Results extends ItemsList {
     search: "",
     submitted: false,
     reload: false,
-    loader: false,
+    loader: true,
     checkedResultsItems: [],
     allChecked: false,
     hitStateItems: [],
@@ -63,8 +63,9 @@ export default class Results extends ItemsList {
 
   componentDidMount() {
     const { arbonneKey, current_user_role } = this.props;
-    this.props.store.ResultsState.dataUrl = "/api/v1/clients/1/hits";
-    let val = window.location.href.split("/")[4];
+    let url = window.location.href;
+    var id = url.substring(url.lastIndexOf('/') + 1);
+    this.props.store.ResultsState.dataUrl = `/api/v1/clients/${id}/hits`;
     this.fetchPropsData();
     if (window.__isReactDndBackendSetUp) {
       window.__isReactDndBackendSetUp = false;
@@ -117,7 +118,7 @@ export default class Results extends ItemsList {
     });
    // this.sidePanelHits.push
     if (data.current_user_role.includes("fw")) {
-      debugger
+
       this.sidePanelHits.push({ id: "-1", name: "Deleted-Results" });
       this.sidePanelHits.push({ id: "-2", name: "Site For Review" });
     }
@@ -291,9 +292,9 @@ export default class Results extends ItemsList {
     console.log(this.store.checkedItems);
     const { hitStatesList, loader } = this.state;
     const { current_user_role } = this.props;
-    const sortIconClassName = classnames("glyphicon", {
-      "glyphicon-sort-by-attributes-alt": sorting.sortDirection === "desc",
-      "glyphicon-sort-by-attributes": sorting.sortDirection === "asc",
+    const sortIconClassName = classnames({
+      "fa fa-sort-amount-asc": sorting.sortDirection === "desc",
+      "fa fa-sort-amount-desc": sorting.sortDirection === "asc",
     });
     const filters = {
       ...this.props.filters,
@@ -308,6 +309,7 @@ export default class Results extends ItemsList {
       },
     };
     return [
+      <div className="container">
       <div className="page results" key="results-page">
         {["fc"].includes(getClientType("fw_client_type")) && (
           <h4 className="non-fw-warning">{FW_ADMIN_WARNING_MSG}</h4>
@@ -327,7 +329,7 @@ export default class Results extends ItemsList {
               className="results__header-button"
               onClick={this.toggleFiltersVisibility}
             >
-              <i className="glyphicon glyphicon-filter"></i>
+              <i className="fa fa-filter"></i>
             </Button>
           </div>
           <div>
@@ -337,7 +339,7 @@ export default class Results extends ItemsList {
               className={`mr-10 ${
                 ["fc"].includes(getClientType()) ? "disabled_element" : ""
               }`}
-              onClick={this.exportResultsToCsv}
+              // onClick={this.exportResultsToCsv}
             >
               Export Results To CSV
             </Button>
@@ -414,11 +416,11 @@ export default class Results extends ItemsList {
                     </li>
                   ))}
             </ul>
-            <QuestionMark
+            {/* <QuestionMark
               tooltipPosition="left"
               tooltipWidth={100}
               tooltip="Use the buttons on the right, or the corresponding hotkeys to organize your results into these tabs"
-            />
+            /> */}
           </div>
           <div
             className={`results__panel ${
@@ -457,6 +459,7 @@ export default class Results extends ItemsList {
               />
             </div>
           </div>
+        </div>
         </div>
         <DropTabs
           tabs={this.sidePanelHits}

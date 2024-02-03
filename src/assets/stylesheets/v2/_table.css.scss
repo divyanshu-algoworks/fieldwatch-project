@@ -1,3 +1,5 @@
+@import './variables.css.scss';
+
 .fw-table {
   font-size: 13px;
   margin-bottom: 0 !important;
@@ -105,16 +107,16 @@
   &__pagination-button {
     &,
     &:hover {
-      background-color: #fff;
+      background-color: #fff !important;
       color: #3ea1d2 !important;
-      border-color: #fff;
+      border-color: #fff !important;
     }
     &--active {
       &,
       &:hover {
         color: #fff !important;
-        background-color: $fieldwatch-blue;
-        border-color: $fieldwatch-blue;
+        background-color: $fieldwatch-blue !important;
+        border-color: $fieldwatch-blue !important;
         cursor: default;
       }
     }
@@ -124,7 +126,8 @@
 .arrows {
   position: relative;
   width: 30px;
-  .glyphicon {
+  font-size: medium;
+  .fa-angle {
     position: relative;
     &:first-child {
       left: 7px;
@@ -135,7 +138,7 @@
   }
 
   &--right {
-    .glyphicon {
+    .fa-angle {
       position: relative;
       &:first-child {
         left: -3px;

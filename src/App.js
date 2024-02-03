@@ -1,11 +1,14 @@
-import './assets/stylesheets/application.css.scss';
-import TopNavBar from './components/TopNavBar'
-import View from './Pages/index';
+import "./assets/stylesheets/application.css.scss";
+import { BrowserRouter } from "react-router-dom";
+import View from "./Pages/index";
 function App() {
   return (
     <>
-    <TopNavBar/>
-      <View />
+      <BrowserRouter>
+        <div className="container">
+          <View />
+        </div>
+      </BrowserRouter>
     </>
   );
 }

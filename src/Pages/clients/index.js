@@ -15,7 +15,7 @@ export default class ClientsDashboard extends CommonList {
         accessor: "client_name",
         sortable: true,
         componentFn: ({ item }) => (
-          <NavLink  className="client-link" to={`/results/${item.id}`}>{item.client_name}</NavLink>
+          <NavLink  className="client-link" to={`/clients/${item.id}/results`}>{item.client_name}</NavLink>
         ),
       },
       {

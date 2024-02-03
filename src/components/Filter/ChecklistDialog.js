@@ -43,10 +43,10 @@ export default class ChecklistDialog extends FilterDialog {
             const label = checkboxLabelFn ? checkboxLabelFn(item) : item.name;
             return (
               <div className="grid__col grid__col--4 filter-dialog__checkbox" key={item.id}>
-                <Tooltip body={label}>
+                {/* <Tooltip body={label}> */}
                   <Input type="checkbox" checked={item.checked} label={label}
                     onChange={({ target }) => this.handleChangeCheckbox(item, target.checked)} />
-                </Tooltip>
+                {/* </Tooltip> */}
               </div>
             )
           })}

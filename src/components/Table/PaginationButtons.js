@@ -42,8 +42,8 @@ const PaginationButtons = ({ pagination, onPaginationChange }) => {
         disabled={page === 1}
         onClick={() => onPaginationChange({ page: 1 })}>
         <div className="arrows">
-          <i className="glyphicon glyphicon-menu-left"></i>
-          <i className="glyphicon glyphicon-menu-left"></i>
+          <i className="fa fa-angle-left"></i>
+          <i className="fa fa-angle-left"></i>
         </div>
       </Button>
     ),
@@ -54,8 +54,8 @@ const PaginationButtons = ({ pagination, onPaginationChange }) => {
         disabled={page === pagesTotal}
         onClick={() => onPaginationChange({ page: pagesTotal })}>
         <div className="arrows arrows--right">
-          <i className="glyphicon glyphicon-menu-right"></i>
-          <i className="glyphicon glyphicon-menu-right"></i>
+          <i className="fa fa-angle-right"></i>
+          <i className="fa fa-angle-right"></i>
         </div>
       </Button>
     )

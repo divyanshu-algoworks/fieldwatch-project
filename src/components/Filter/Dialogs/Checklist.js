@@ -12,9 +12,9 @@ const FilterCheckbox = ({ label, item, onChange }) => {
   }
 
   return (
-    <Tooltip body={label}>
-      <Checkbox checked={item.checked} label={label} onChange={handleChange} />
-    </Tooltip>
+    // <Tooltip body={label}>
+      <Checkbox checked={item.checked} label={label?.toUpperCase()} onChange={handleChange} />
+    // </Tooltip>
   );
 };
 
