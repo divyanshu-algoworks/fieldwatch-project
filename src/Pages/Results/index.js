@@ -27,7 +27,7 @@ import { InstructionActionsPanel } from "../../components/ActionsPanel/Instructi
 import { autobind } from "core-decorators";
 import { action, makeAutoObservable, makeObservable } from "mobx";
 
-// @DragDropContext(HTML5Backend)
+@DragDropContext(HTML5Backend)
 @inject("store")
 @observer
 export default class Results extends ItemsList {
@@ -43,6 +43,7 @@ export default class Results extends ItemsList {
     reload: false,
     loader: true,
     checkedResultsItems: [],
+    clientId: "",
     allChecked: false,
     hitStateItems: [],
     hitStatesList: [],
@@ -64,9 +65,9 @@ export default class Results extends ItemsList {
   componentDidMount() {
     const { arbonneKey, current_user_role } = this.props;
     let url = window.location.href;
-    var id = url.substring(url.lastIndexOf('/') + 1);
-    this.props.store.ResultsState.dataUrl = `/api/v1/clients/${id}/hits`;
-    this.fetchPropsData();
+    var id = url.split('/').slice(-2, -1)[0];
+    this.props.store.ResultsState.dataUrl = `/clients/${id}/hits`;
+    this.fetchPropsData(id);
     if (window.__isReactDndBackendSetUp) {
       window.__isReactDndBackendSetUp = false;
     }
@@ -108,9 +109,9 @@ export default class Results extends ItemsList {
   setSubmitted = () => this.setState({ submitted: true });
   setUnsubmited = () => this.setState({ submitted: false });
 
-  fetchPropsData = async () => {
+  fetchPropsData = async (id) => {
     const data = await API.get(
-      `/api/v1/clients/${1}/hits/hits_filterable_data`
+      `/clients/${id}/hits/hits_filterable_data`
     );
     this.setState({ propsData: data }, () => {
       this.fetchData();
@@ -443,7 +444,8 @@ export default class Results extends ItemsList {
             )}
             <aside className="results__hits-actions">
               <SidePanel
-                selectedCount={checkedItems.length}
+                //selectedCount={checkedItems.length}
+                selectedCount={false}
                 hitStates={this.sidePanelHits}
                 onChangeState={this.handleChangeState}
                 onClearSelection={this.store.handleClearCheckedItems}

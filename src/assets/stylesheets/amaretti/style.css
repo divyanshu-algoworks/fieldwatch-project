@@ -3352,10 +3352,9 @@ fieldset[disabled] .btn-default.active {
   background-color: #555555;
 }
 .btn-primary {
-  border-color: #ec4b4b;
+  border-color: #3ea1d2;
   color: #ffffff;
-  background-color: #ef6262;
-  border-color: #ef6262;
+  background-color: #3ea1d2;
 }
 .btn-primary:focus,
 .btn-primary.focus {
@@ -9113,7 +9112,7 @@ button:focus {
 .main-content {
   padding-left: 35px;
   padding-right: 35px;
-  padding-top: 35px;
+  /* padding-top: 35px; */
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .main-content {

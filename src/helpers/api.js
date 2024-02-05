@@ -1,19 +1,24 @@
 import getToken from './getToken';
 import { toQueryString } from './url';
+import 'react-toastify/dist/ReactToastify.css';
 import { toast } from "react-toastify";
 
-function showRequestNotification(status, res = {}) {
+function showRequestNotification(status, res = {}, response={}) {
   const body = res.body && JSON.parse(res.body);
-  debugger
   if (status === 200 || status === 204) {
     return;
   }
-  if (status === 403) {
+  if (status === 400) {
+    toast.error('Session Timeout');
+    localStorage.clear();
+    setTimeout(() => {
+      window.location.href = '/login'
+    }, 1000) 
     // FW.flash({ type: 'info', text: 'Forbidden action' });
   }
   if (status === 401) {
     // FW.flash({ type: 'info', text: 'Your session has been expired' });
-    toast.error('Invalid Creds');
+    toast.error('Invalid User');
     return;
    // window.location.reload(false)
   } 
@@ -54,7 +59,7 @@ export default class API {
         resUrl = `${resUrl}&${paramsStr}`;
       }
     }
-    return `https://devperform.fieldwatch.org${resUrl}`
+    return `${process.env.REACT_APP_BASE_URL}api/v1${resUrl}`
   }
 
   static sendRequest(url, { searchParams, ...params }) {
@@ -75,18 +80,13 @@ export default class API {
         headers,
       })
         .then((res) => {
-           debugger
-          // if(res.status === 401) {
-          //   alert('Unauthorised');
-          // }
           if (res.ok) {
             return res.json();
           }
-          showRequestNotification(res.status, params);
+          showRequestNotification(res.status, params, res);
           //reject({});
         })
         .then((res) => {
-          debugger
           if (res.redirect) {
             window.location.href = res.redirect;
           }

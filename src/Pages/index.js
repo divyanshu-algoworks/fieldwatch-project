@@ -4,6 +4,8 @@ import { PublicRoutes } from "../Routes/PublicRoute";
 import { PrivateRoutes } from "../Routes/PrivateRoute";
 import PrivateLayout from "../Pages/PrivateLayout";
 import TopNavBar from "../components/TopNavBar";
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 export default function Index() {
     const location = useLocation();
@@ -19,6 +21,7 @@ export default function Index() {
 
   return (
     <>
+    <ToastContainer position="top-center" autoClose={2000} />
     {shouldToNavBar() && <TopNavBar isClientSelected={isClientSelected()}/>}
       <Routes>
         <Route path="/" element={<Navigate replace to="/login" />} />

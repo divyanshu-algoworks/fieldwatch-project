@@ -55,7 +55,7 @@ export default class ClientsDashboard extends CommonList {
   }
 
   getUrl = () => {
-    return "/api/v1/case_management/clients";
+    return "/case_management/clients";
   };
 
   render() {
@@ -72,11 +72,12 @@ export default class ClientsDashboard extends CommonList {
                 <div>
                   <Input
                     type="search"
+                    className="mr-5"
                     onChange={this.handleChangeSearch}
                     value={this.state.search}
                   />
-                  <Button type="link" href={`${this.props.url}/new`}>
-                    <i className="glyphicon glyphicon-plus"></i>
+                  <Button type="link">
+                    <i className="fa fa-plus" style={{fontSize: 'smaller', marginRight:'2px'}}></i>
                     New Client
                   </Button>
                 </div>

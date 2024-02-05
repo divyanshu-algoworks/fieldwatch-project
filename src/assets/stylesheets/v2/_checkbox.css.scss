@@ -47,6 +47,7 @@
     color: $fieldwatch-blue;
     // TODO: change to FontAwesome in future
     font-family: 'FontAwesome';
+    font-size: small;
     background-color: #fff;
     &--small {
       width: 15px;
@@ -57,9 +58,9 @@
     }
     &--checked {
       border-color: $fieldwatch-blue;
-      &:before {
-        content: "\e6cd";
-      }
+      // &:before {
+      //   content: "\e6cd";
+      // }
     }
 
   }

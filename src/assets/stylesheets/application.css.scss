@@ -59,6 +59,8 @@ table thead tr {
 /* Style the links inside the navigation bar */
 .dropdown-item {
   color: white;
+  font-size: smaller;
+  padding: 0.35rem;
 }
 
 .dropdown-menu-dark .dropdown-item {
@@ -96,7 +98,24 @@ list-style: none;
   background: #aaa;
     height: 30px;
     width: 1px;
-    margin-top: 10px !important;
+    margin-top: 5px !important;
+}
+.client_name_icon {
+  color: white;
+  margin-top: 13px;
+}
+.client_name {
+  color: #ed8800;
+    font-size: initial;
 }
 
+.active {
+  color: #3ea1d2;
+}
+
+.nav-icon-item {
+ display: flex;
+align-items: center;
+margin-top: 5px;
+}
 
