@@ -6,6 +6,7 @@ import fieldWatchLogo from "../../assets/images/fieldwatch_logo_small.png";
 import CommonForm from "../../components/CommonForm";
 import { checkRequired } from "../../helpers/validators";
 import { toast } from "react-toastify";
+import mfLogo from '../../assets/images/mf_logo.png'
 @inject("store")
 @observer
 export default class Login extends CommonForm {
@@ -80,9 +81,19 @@ export default class Login extends CommonForm {
                           <div className="buttons_links_block row">
                             <div className="col-xs-6 link_container"></div>
                             <div className="col-xs-6 text-right">
-                              <button type="submit" className="btn btn-primary" style={{backgroundColor: '#3ea1d2'}}>
+                              <button
+                                type="submit"
+                                className="btn btn-primary"
+                                style={{ backgroundColor: "#3ea1d2" }}
+                              >
                                 Log me in
                               </button>
+                            </div>
+                          </div>
+                          <div className="footer_logo">
+                            <div>Powered By:</div>
+                            <div>
+                              <img src={mfLogo}/>
                             </div>
                           </div>
                         </div>

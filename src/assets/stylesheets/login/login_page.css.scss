@@ -52,7 +52,7 @@
   padding-top: 60px;
 
   div.logo_image {
-    background-image: asset_url('fieldwatch_logo_small.png');
+    // background-image: asset_url('fieldwatch_logo_small.png');
     background-repeat: no-repeat;
     background-size: cover;
     width: 182px;
@@ -88,7 +88,7 @@
   }
 
   .input-group {
-    border-bottom: 2px solid #999;
+    // border-bottom: 2px solid #999;
 
     i {
       color: #888;
@@ -98,7 +98,7 @@
 
   .buttons_links_block {
     margin-top: 10px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     height: 60px;
 
     .link_container {
@@ -124,6 +124,7 @@
 
     div {
       display: inline-block;
+      margin-bottom: 30px;
     }
 
     img {
