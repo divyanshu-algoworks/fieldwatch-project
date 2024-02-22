@@ -6,7 +6,8 @@ import fieldWatchLogo from "../../assets/images/fieldwatch_logo_small.png";
 import CommonForm from "../../components/CommonForm";
 import { checkRequired } from "../../helpers/validators";
 import { toast } from "react-toastify";
-import mfLogo from '../../assets/images/mf_logo.png'
+import mfLogo from "../../assets/images/mf_logo.png";
+import "./style.css";
 @inject("store")
 @observer
 export default class Login extends CommonForm {
@@ -22,6 +23,12 @@ export default class Login extends CommonForm {
       loggedIn: false,
     };
   }
+  componentDidMount() {
+    document.body.style.backgroundColor = "rgb(202 234 240)"; //"#1d6d7e";
+  }
+  componentWillUnmount() {
+    document.body.style.backgroundColor = "#f0f0f0";
+  }
   handleChangeEmail = ({ target }) => this.changeValue("email", target.value);
   handleChangePassword = ({ target }) =>
     this.changeValue("password", target.value);
@@ -35,7 +42,7 @@ export default class Login extends CommonForm {
     return (
       <React.Fragment>
         {this.state.loggedIn && <Navigate to="/dashboard" />}
-        <form onSubmit={this.handleSubmit}>
+        {/* <form onSubmit={this.handleSubmit}>
           <div id="login_main_container">
             <div className="am-wrapper am-login mt-10">
               <div className="am-content">
@@ -104,7 +111,74 @@ export default class Login extends CommonForm {
               </div>
             </div>
           </div>
-        </form>
+        </form> */}
+        <div class="login-body">
+          <div class="background"></div>
+          <div class="login-container" id="loginContainer">
+            <div class="login-header">
+              <div className="logo_image">
+                <img src={fieldWatchLogo} />
+              </div>
+              <p>Please enter your user information.</p>
+            </div>
+            <div class="login-form">
+              <form onSubmit={this.handleSubmit}>
+                {/* <div class="input-group">
+                  <i class="fa fa-user"></i>
+                  <input
+                    type="text"
+                    value={this.state.item.email}
+                    name="username"
+                    onChange={this.handleChangeEmail}
+                    placeholder="Username"
+                    required
+                  />
+                </div> */}
+                <div class="user-input-wrp mb-10">
+                  <br />
+                  <input type="text" 
+                  class="inputText" 
+                  required 
+                  value={this.state.item.email}
+                    name="username"
+                    onChange={this.handleChangeEmail}
+                  />
+                  <span class="floating-label">Email</span>
+                </div>
+                {/* <div class="input-group">
+                  <i class="fa fa-lock"></i>
+                  <input
+                    type="password"
+                    name="password"
+                    value={this.state.item.password}
+                    onChange={this.handleChangePassword}
+                    placeholder="Password"
+                    required
+                  />
+                </div> */}
+                <div class="user-input-wrp">
+                  <br />
+                  <input type="password" 
+                  class="inputText" 
+                  name="password"
+                    value={this.state.item.password}
+                    onChange={this.handleChangePassword}
+                  required />
+                  <span class="floating-label">Password</span>
+                </div>
+                <button className="login-btn mt-20" type="submit">
+                  Login
+                </button>
+              </form>
+            </div>
+            <div className="footer_logo mt-20">
+              <div>Powered By:</div>
+              <div>
+                <img src={mfLogo} />
+              </div>
+            </div>
+          </div>
+        </div>
       </React.Fragment>
     );
   }
